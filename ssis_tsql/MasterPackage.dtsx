@@ -286,7 +286,7 @@
       DTS:DTSID="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="DFT_HistoryAggregate"
+      DTS:ObjectName="Clean and Transform Data"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -294,7 +294,7 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT_HistoryAggregate\Data Conversion"
+              refId="Package\Clean and Transform Data\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -302,34 +302,34 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\Clean and Transform Data\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input].Columns[DEPTID]"
+                      refId="Package\Clean and Transform Data\Data Conversion.Inputs[Data Conversion Input].Columns[DEPTID]"
                       cachedDataType="wstr"
                       cachedLength="4000"
                       cachedName="DEPTID"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]" />
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Clean and Transform Data\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]"
+                      refId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
-                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]"
+                      lineageId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]"
                       name="DEPTID"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -337,7 +337,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -348,22 +348,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\Clean and Transform Data\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -372,11 +372,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE"
+              refId="Package\Clean and Transform Data\DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE"
               componentClassID="Microsoft.RowCount"
               contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="SSISOps :  PREFIX. "
-              name="DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE">
+              name="DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE">
               <properties>
                 <property
                   dataType="System.String"
@@ -385,7 +385,7 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]"
+                  refId="Package\Clean and Transform Data\DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]"
                   hasSideEffects="true"
                   name="Row Count Input 1">
                   <externalMetadataColumns />
@@ -393,15 +393,15 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[Row Count Output 1]"
+                  refId="Package\Clean and Transform Data\DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[Row Count Output 1]"
                   name="Row Count Output 1"
-                  synchronousInputId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]">
+                  synchronousInputId="Package\Clean and Transform Data\DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg"
+              refId="Package\Clean and Transform Data\Src DFTCostHistAgg"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -426,7 +426,7 @@
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT a.[EMPID],a.[EMPNAME],NULLIF(a.ADDRESS,'Address Unknown') ADDRESS
- a.[EMPSTATUS], a.[DEPTID]
+ , a.[EMPSTATUS], a.[DEPTID]
 FROM [dbo].[DFT_EMPLOYEES] a
         WHERE a.[EMPSTATUS] = 'ACTIVE'</property>  
                 <property
@@ -453,7 +453,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Connections[OleDbConnection]"
+                  refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Connections[OleDbConnection]"
                   connectionManagerID="{5C73D759-DEF9-491B-AC6D-C497F63BD5FF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[SQL8_nvz_profiler]"
                   description="The OLE DB runtime connection used to access the database."
@@ -461,148 +461,148 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </connections>
               <outputs>
                 <output
-                  refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output]"
+                  refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarMonth]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]"
+                      externalMetadataColumnId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarMonth]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]"
                       name="CalendarMonth"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[BusinessUnit]"
+                      externalMetadataColumnId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[BusinessUnit]"
                       length="30"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]"
                       name="BusinessUnit"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]"
+                      externalMetadataColumnId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]"
                       name="CalendarYear"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[DEPTID]"
+                      externalMetadataColumnId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[DEPTID]"
                       length="4000"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]"
                       name="DEPTID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CurrentAmount]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]"
+                      externalMetadataColumnId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CurrentAmount]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]"
                       name="CurrentAmount"
                       precision="38"
                       scale="7"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[QuantityShipped]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]"
+                      externalMetadataColumnId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[QuantityShipped]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]"
                       name="QuantityShipped"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarMonth]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarMonth]"
                       dataType="i4"
                       name="CalendarMonth" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[BusinessUnit]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[BusinessUnit]"
                       dataType="wstr"
                       length="30"
                       name="BusinessUnit" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
                       dataType="i4"
                       name="CalendarYear" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[DEPTID]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[DEPTID]"
                       dataType="wstr"
                       length="4000"
                       name="DEPTID" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CurrentAmount]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CurrentAmount]"
                       dataType="numeric"
                       name="CurrentAmount"
                       precision="38"
                       scale="7" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[QuantityShipped]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[QuantityShipped]"
                       dataType="i4"
                       name="QuantityShipped" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarMonth]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarMonth]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarMonth]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarMonth]"
                       name="CalendarMonth" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[BusinessUnit]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[BusinessUnit]"
                       dataType="wstr"
                       length="30"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[BusinessUnit]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[BusinessUnit]"
                       name="BusinessUnit" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[QuantityShipped]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[QuantityShipped]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[QuantityShipped]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[QuantityShipped]"
                       name="QuantityShipped" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
                       name="CalendarYear" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[DEPTID]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[DEPTID]"
                       dataType="wstr"
                       length="4000"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[DEPTID]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[DEPTID]"
                       name="DEPTID" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CurrentAmount]"
+                      refId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CurrentAmount]"
                       dataType="numeric"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CurrentAmount]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CurrentAmount]"
                       name="CurrentAmount"
                       precision="38"
                       scale="7" />
@@ -612,7 +612,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </outputs>
             </component>
             <component
-              refId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg"
+              refId="Package\Clean and Transform Data\SRC Src DFTCostHistAgg"
               componentClassID="Microsoft.RowCount"
               contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="SSISOps :  PREFIX. "
@@ -625,7 +625,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </properties>
               <inputs>
                 <input
-                  refId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]"
+                  refId="Package\Clean and Transform Data\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]"
                   hasSideEffects="true"
                   name="Row Count Input 1">
                   <externalMetadataColumns />
@@ -633,19 +633,19 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Outputs[Row Count Output 1]"
+                  refId="Package\Clean and Transform Data\SRC Src DFTCostHistAgg.Outputs[Row Count Output 1]"
                   name="Row Count Output 1"
-                  synchronousInputId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]">
+                  synchronousInputId="Package\Clean and Transform Data\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE"
+              refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE"
+              name="Tgt_PAH_DFTCOSTHISTORYAGGREGATE"
               usesDispositions="true"
               version="4">
               <properties>
@@ -698,7 +698,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Connections[OleDbConnection]"
+                  refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Connections[OleDbConnection]"
                   connectionManagerID="{83BAB031-5677-4161-AEE9-93254265AB3C}:external"
                   connectionManagerRefId="Project.ConnectionManagers[SQL9_nvz_profiler]"
                   description="The OLE DB runtime connection used to access the database."
@@ -706,83 +706,83 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]"
+                  refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CalendarMonth]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CalendarMonth]"
                       cachedDataType="i4"
                       cachedName="CalendarMonth"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARMONTH]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]" />
+                      externalMetadataColumnId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARMONTH]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]" />
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
                       cachedDataType="i4"
                       cachedName="CalendarYear"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARYEAR]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]" />
+                      externalMetadataColumnId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARYEAR]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]" />
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CurrentAmount]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CurrentAmount]"
                       cachedDataType="numeric"
                       cachedName="CurrentAmount"
                       cachedPrecision="38"
                       cachedScale="7"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[COMPLETEDAMOUNT]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]" />
+                      externalMetadataColumnId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[COMPLETEDAMOUNT]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]" />
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[DEPTID]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[DEPTID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="DEPTID"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[DFTITEMNUMBER]"
-                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]" />
+                      externalMetadataColumnId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[DFTITEMNUMBER]"
+                      lineageId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]" />
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[BusinessUnit]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[BusinessUnit]"
                       cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="BusinessUnit"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[BusinessUnitCode]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]" />
+                      externalMetadataColumnId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[BusinessUnitCode]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]" />
                     <inputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[QuantityShipped]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[QuantityShipped]"
                       cachedDataType="i4"
                       cachedName="QuantityShipped"
-                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYSHIPPED]"
-                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]" />
+                      externalMetadataColumnId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYSHIPPED]"
+                      lineageId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARMONTH]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARMONTH]"
                       dataType="i4"
                       name="CALENDARMONTH" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARYEAR]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARYEAR]"
                       dataType="i4"
                       name="CALENDARYEAR" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[DFTITEMNUMBER]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[DFTITEMNUMBER]"
                       codePage="1252"
                       dataType="str"
                       length="25"
                       name="DFTITEMNUMBER" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYSHIPPED]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYSHIPPED]"
                       dataType="numeric"
                       name="QUANTITYSHIPPED"
                       precision="18" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[COMPLETEDAMOUNT]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[COMPLETEDAMOUNT]"
                       dataType="numeric"
                       name="COMPLETEDAMOUNT"
                       precision="38"
                       scale="7" />
                     <externalMetadataColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[BusinessUnitCode]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[BusinessUnitCode]"
                       dataType="wstr"
                       length="50"
                       name="BusinessUnitCode" />
@@ -791,22 +791,22 @@ FROM [dbo].[DFT_EMPLOYEES] a
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -817,25 +817,25 @@ FROM [dbo].[DFT_EMPLOYEES] a
           </components>
           <paths>
             <path
-              refId="Package\DFT_HistoryAggregate.Paths[Data Conversion Output]"
-              endId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]"
+              refId="Package\Clean and Transform Data.Paths[Data Conversion Output]"
+              endId="Package\Clean and Transform Data\DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]"
               name="Data Conversion Output"
-              startId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Clean and Transform Data\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\DFT_HistoryAggregate.Paths[OLE DB Source Output]"
-              endId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]"
+              refId="Package\Clean and Transform Data.Paths[OLE DB Source Output]"
+              endId="Package\Clean and Transform Data\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]"
               name="OLE DB Source Output"
-              startId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output]" />
+              startId="Package\Clean and Transform Data\Src DFTCostHistAgg.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\DFT_HistoryAggregate.Paths[Row Count Output 1]"
-              endId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Clean and Transform Data.Paths[Row Count Output 1]"
+              endId="Package\Clean and Transform Data\Data Conversion.Inputs[Data Conversion Input]"
               name="Row Count Output 1"
-              startId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Outputs[Row Count Output 1]" />
+              startId="Package\Clean and Transform Data\SRC Src DFTCostHistAgg.Outputs[Row Count Output 1]" />
             <path
-              refId="Package\DFT_HistoryAggregate.Paths[Row Count Output 2]"
-              endId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]"
+              refId="Package\Clean and Transform Data.Paths[Row Count Output 2]"
+              endId="Package\Clean and Transform Data\Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]"
               name="Row Count Output 2"
-              startId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[Row Count Output 1]" />
+              startId="Package\Clean and Transform Data\DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE.Outputs[Row Count Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1199,7 +1199,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
         <DTS:Executable
           DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_1"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DFT_HistoryAggregate=&gt;Src DFTCostHistAgg]"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [Clean and Transform Data=&gt;Src DFTCostHistAgg]"
           DTS:DTSID="{9BB9DE62-570A-4EE7-A45D-7DB78F52034F}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -1264,7 +1264,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
         <DTS:Executable
           DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_2"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DFT_HistoryAggregate=&gt;Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE]"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [Clean and Transform Data=&gt;Tgt_PAH_DFTCOSTHISTORYAGGREGATE]"
           DTS:DTSID="{72BDA4D2-21CB-433F-96F2-6C8C395A152E}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -1274,7 +1274,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
-              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_53',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE',@DataObjectType='TableOrView',@DataObjectName='[dbo].[DFT_EMPLOYEES_DIM]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_53',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='Tgt_PAH_DFTCOSTHISTORYAGGREGATE',@DataObjectType='TableOrView',@DataObjectName='[dbo].[DFT_EMPLOYEES_DIM]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
                 SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectConnectionString"
@@ -2415,7 +2415,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
           DTS:Namespace="User"
           DTS:ObjectName="varSSISOps_DfLayout">
           <DTS:VariableValue
-            DTS:DataType="8">&lt;layout version="3" compressed="true"&gt;&lt;DTS:Executable xmlns:DTS = "www.microsoft.com/SqlServer/Dts" DTS:ExecutableType = "SSIS.Package.2"&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1YXW/aMBT9K1ae0yQOCbSMII2PbpXohxrexjS5iQlWHZvGTgut9t/nhLQzpUEUbdLUwRO+du4599yTq8idMRK3X7mQIMaCJOxIkhQfMZTiwLhC0S1K8CTEd+CCSwROiYgQVSclIlRMBqfjH6etZs+B0Oh2RmjJc3nGprzb+ZKh+WwVAH00RxGRy8CATQMsUspEYEQ0K0GE2sPtcxJlXPCptMI7GuLsHmfWGZM4yZAknBUREmFhDUqKavOcx5haKk4QJY/loU9ICJze0GWwa7aSZMWonQqRULwLsfIxa1XckCWE4e3QazCLwJhJOW/btohmOEXCSl8eiXhqPxA2Xdiu4zTtBUqpzi7dnVwpzy6sup0LdbRqVEgelQDQd0zPNcBZ/C4DTMLrPng2Axjz+QhPZWA0fMs3odOyfAPYb6E1W3uhDVTr73EM+pzmKQM6pNuyHO0HTQ82auFdby/4zUK9Y1WoX4fjwv1EHQzDMbgcDcGgB5T5JWGlhTVcBalX2zJ9WMsCtvYTeysB130ldxNu6TbcTwak9vucKeOKdfSGY7rOSS2ef/wH3KXDQdXlBoQV4DBOngHfCWFdITkT3675gwLJmQSXuZyrNO53DQ1CpzCVX+ipg1n9XL3D3c5qZrXLFQglyqTSiOFI8iwwnhbti5zSnwYYsliLO2bTMVani4VT7hf/fLeE0ZOqCZukmEnxEq4CShiq8qleaONde3qkpmJ1dC19IZpdl+r31mvwtbhabkqhRUboBtOKcdpebagI6CmdY8KSHl+UhZtl8deYKkff4ysuSEEiMD6z5YrnGzm12N/oPtzsPvRODt3/kN2vpmrI8yzClQM2++8dXv6P2f5XXzD1E8Dz/YMF/h8LbBqg4TcOBviYBlj/rq11gOvDgwP+RQfY2kWHWulXIPbzxUr3FzJnsDdjEQAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\DFT_F76B011&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO2WXW/aMBSG/4rl6zSJA+EjI1w0wIZEadVwN6bKDSZYdWwaOyt02n+fCaFz2JiqsU2a1FzZr4/P89onttybYfnwQUgFFkTSlF8ompELjjMSwhucPOCUzGPyCKZCYTCiMsFMRypMmSz1UbuF0OV8MLrbt+5ilcJ+b4K3olBjvhT93vscr1d7AUR4jROqtiHsQLDJGJchTFheAqUeIsEVTXIhxVLZ8SOLSf6Z5PaYK5LmWFHBdwpNiLQHpV09eCUWhNlap5jR5zLoHZaSZPdsG742W+mxchRkUqaMvMZYOc3er23IU8rJr9E1zCaEK6XWgePIZEUyLO3sZUoiMueJ8uXG8Vy35WxwxvSuTvVSq42M6bN2iPy21fQgGC9+v1rz68kQDC5BLIo8IRDMxHpClkon79i+5ds+BM7P0J3G+ej4NgKn8JrsGh+ykNs+acb7A2YGw3gGVKoMDw1twvLc7iluF52PrRN9pIkNhCricJEeiOdA7BusVvLjrXgCkSi4AteFWuuc3icD3W1b3g4PTawdFfrP7ff2ZyIoeyBWOFeR4JwkSuQh/LIJpgVjXyEY8oWhu1bLhfvoXcctx3ct3ysxZlJ9gtOMcCVf5EqIBGM6nz6txu1hzJ7oU1eF1tLvts85ler70DG8puvuj1thKBN8T5g8SLptmHXqkw+hhvbXy4uOyoua3bfy/rflrV2UVYmPCtxsv9X3H9bXMZ42umc+epzDu6r/DVOez+tiCQAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\Seq F7611B\DF_F7611B_Stg&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1YXW/aMBT9K1ae0yQOcSiMIA1Kt0r0Qw1v6zS5wQSrjk1jp4VO++9zArQJJROlL1MLT/he55577zn+kDsjLO++C6nAmEga8yNFE3LEcUIC4wpHdzgmNyG5BxdCYXBKZYSZnqkwZfLm5PTXadOHDuwZ3c4QL0SmzvhEdDvfUjybLg2gj2c4omoRGNA3wDxhXAZGxNICQ2ofaZ/TKBVSTJQV3rOQpA8ktc64InGKFRU8t9CISOukyFA7z8WYMEvbKWb0qZj0BUtJklu2CHaNViS5yqidSBkzsktixWfWsrgBjykn/4auwMwDY6rUrG3bMpqSBEsref4kEon9SPlkbruO49tznLBydsnuyRXt2SWrbudCT10RFdIn3QDo+abnGuBs/Bb+b0axetYCGInZkExUYLiOhZyXHzSbsGUhA9jbgH24D/AJ1u6+4LooqdktgUPPdJ16OHS8F5zW3AMZa0SWJRU0ZCGzAWEt3n59DdNoW181jInqoFqtvZBEqkoQHrKcCnUI1gLCprsX4nUfbK/vuCIbDQ6dZr1umu8nEsAylXCjdA826kvfT0aDcAS2rxlUrb1l+nBd+2Acr9HfhmddYTWVPzbWCrjM1CxTP0vgLU8Ly0W5istwVj/Tu0a3s9wl28UIhAqnSkfjJFIiDYzf8/ZFxtgfAwz4uGR3TN8xlrPzgVP483/ILWDKQfWeHieEK/lsXhk0TUzHy7N+OVBKXw/1PryaWgmft82uC/Xi2gSv2PXwdStKliG+JWyVcdJeOrQF9ETGx5THPTEvCjeL4q8J0+fQA7kSkuZJBMZXvljmuSVmyfZ+/vMlXkN6damj5kEAH1EA1+JRr/+Mr1UA3A0dVPc9H7UOOvgUOoCvDgHoHbj/kNxfDgfgpAdCkaURqbsCeIcD4EOSv3Hr3eEu4CF0kMKnkcKrc6CihQZqHLTwP2rBLj246VH5Kc5ev+91/wLg1S6b6hMAAA==]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\DF_F76101B&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1aXXPiNhT9Kx4/g7FkyR80MLMBdpsO2c3EvHU7jGIU4oltUUveJdnpf69scGIH5JAd0japecK60tHRPfdeCeGTGeG3vzIutAXl4TLpijCm3YTEdKBfkOCWLOnX8cf5R4wRMAHWhydTcscycZZcs+HJp5SsbjYN2oisSBCKu4FuQV1bx1HCB3oQpQUYlzbaPw+DlHF2LQz/z8in6TeaGmeJoMuUiJAleUsYUG6MCyrSeM4WNDJke0ii8L7o9AvhnMZX0d3gULSC5JZRP+Z8GdFDiBXDjM3iJskyTGjz1LVp1gP9RohVv9fjwQ2NCTfihyEBi3vfw+R63YOmaffWJI6q7OLDyRXuOYTV8OSz7LoVyg/vpQMABh0khTpb7BX6q58Gj6prM7aa0msx0CF2DNzBhmzr7UOFViPqeRaJMCBcVCEdICFdCJSgjtNM9XKkqegiJLGB6aixzUbsT1T4JKL8kq5kVAY1aLeDgKUGxo3As7k/+3A59y8mo7OJX8FFnldQhkonQ7PZH+OJP9PU+K7k3PFgA3PveXgx5ysahJT7qyisqYmeg0fN7NXI+FnHPBN9vy3ofEwEnY9YIpODyyox9wVdgeoseRx2MFCHOELN0ShIOvc3S6jhGmblAxsX4jUr4LO05phCUQd4SsreMwEzmpdBPpJjZ2kYV+GtPIcsoMzPn3U73HG7DRoS9YCgV/he+rnieuA0hqfdXBflQoj2uJBafEK5BGiWMkwWyxJaAWZcEHHDf8/l1L5kYpWJPyp4lmV1HDv3ehXLGGWysA9PNhtZv3gq1i0kqYQGgqUD/ce6/zmLor90bZIsKu1mxzb1Te/8wSzs+becul4HldvuMqaJ4A/N24YRiyKJJxdf2fMro6dyq9x2rcHnPumpoB5NTyevtcvHXVdUWqbkikZbxnF/Y5At2inLkkWYLE/Zulh4p1j8JY3kUeEbvWA8zEkM9A/J3YbnHsxK2wvEvWTfZbhkSamwZlU1xq4MRhu3Gr8vjSF4msityO9P5KrGHnqyvR9dcHn68aoflfyo1ulVQ6E+VRsWRVjspD5AXpv6b1rjL9OJNj7VfJalAVWc1JDTivymRX64migTGdUkNpEBcce1rWPK3IXAzGFts7Z7gD3Sl11zhWpdXy8YgG24yHVN27JtEzlu4fCHya7C4JTehzQtR12wMBFg/8DCBnMbNPfaLLlCtMfYUxPsQtPOPdI0qIGmenhJtnR5A+WyB3oRb4WSbd7tnqvy0nrkpGtr67+vcf2QZAPDOXpthRBvSuserbe2Vxb8SRl0frZ+Og3103ksRjvl02ksQ/mN225xO5SkcnTJdOtiNd2yA3oR50fd/p+ZNGXsNltp50QEN6qTKG6vGo4uche5BvCA5doOcJ0irhHCFpDR6NmG5ULHsZAlDQAYtunJb/9MPIxpKmdYyJ+gURYniojAuP1x8rbTfq/MOzcNFm4PSu9Q550DsY3bG6U3rnP9X0RF3Ya4/ffvP6lzr/Lik3yqvhLVK1+oGv4NVio2mFslAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\DF_F5541015&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO2YXW/aMBSG/4qVa5rEIQmUEaQtwNaJ0qrhbp2QG0yw6tg0dlrotP8+J0DntE1VFW1SK7iyjz/eN+cxJx/dCRLX37iQYIYFSdiRJCk+YijFgXGO4muU4MsI34AxlwgMiYgRVTMlIlSU8WHLh/DLZX843bSMXneE1jyXJ2zOe92vGVouNgEQoiWKiVwHBvQNsEopE4ER06xUE2oMd05JnHHB59KMbmiEs1ucmSdM4iRDknBWREiMhdkvvarBUz7D1FRxgii5Lyd9QkLg9Iqug9fuVprcOuqkQiQUv8ZYuczcXNyAJYThl6UrMqvAWEi57FiWiBc4RcJMH5bEPLXuCJuvLMe2fWuFUqrSOlaXus1kRO6VQ+gcN1zHACezt6G6DHm6zCUWBpjw5QjPZWA0W40mhKZnAOs5xaa3n+JEHa6zeR+tdUnXtLUfbHjQqzVw7OxnILoIwef+GRgPJiDieRZjzYmSrTqBdqvWiefu56QfTvtIosl6WQHguKbXcOzjet32nro4m37vDwrxqrBTuXrYcGGz1oTb2s/EeDi9wEueScIS3UP70VFowfpE+P5+HmqPAWwrBPVHsG3vCWAQTUBNAoq/XiUBPtydwMEs2Rl5q7R5juRC/LjgdyDkOZPgLJeqAADnp27BVh4avlckXlc1w1xVsV53Ux87ZQ9EEmUy5IzhWPIsMH6tOuOc0t8GGLCZFrcbvm1sZhcduxwvWp5TyuibqmqepJhJ8RDeBkJOqdpPVW7tVqKtHqkKvJ1a2b7InlW31d+hx+KVuOo+TYUWGaErTMUupNqaWau6eDdVi/1TuvApXege6L5Puqp6k1s8U4RpnrIXEHte64D44yB+hrDreQfCH4fwU8BNr3kA/D4Bqwd7RZeptz5RqNcRdjx4IPwuCVdfHmoBu4eb8P/ka2mfm1RP/xBl7b5z9f4AUzFtl/ISAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\Seq F7611B\DF_F7611B&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1X3W7aMBh9FSvXaRIHQltGkCBQQKIFkdxs64TcYIJVx2ax00KnvfuchHbuDxtoN1NVrvD57HOOv+NYSStC4nbIhQQLLEjCTiRJ8QlDKfaNKYpvUYKvexfRvHcx72bogdAhEZJn206SZDhBEhvt1hhteS5HbMnbrUGG1qsKAAFao5jIrW/AhgE2KWXCN2KalfRC1XDzksQZF3wprfA7DXF2hzNrxCROMiQJZwVCYiysXmlOFS/5AlNL4QRR8lBO+oSEwOkN3fqHspUmd46aqRAJxYcYK5dZ1eb6LCEM/1n6mczGN1ZSrpu2LeIVTpGw0qclMU/te8KWG9t1nIa9QSnV3aWHmyvbc4irdutKTd0FFZIH1QB4dmrWXQOMFgdGfx1mMahKgTpBRVnVDBDx9RgvpW8oQs/yDGC/oebC2rFqswD8TfG0bkLndJ9mDR67wyiR82lnOO/OOl9G42ASRsNRGE1mnzuDwaw/6ER9Tdx1LUf7QbMOa3uteM6RVnr9MAJH+VG91/3UzBqE+/zABjzWD5IIBJypMyXUw6XpQscxXed8J9VfJI9SB5NbUyRX4utk3Ae9Lgh5nsUYTHK5zuU3XejMsTyzXuSt61hBrk56u1U92c1yBEKJMqnsMhwrKd/4sWle5ZT+NECfLTTcMRuOUc0uBk5ZL/55bimjk6p7KEkxk+IJ3gEBp1TxqbZol6C2eqzujt3UZ/RFv+x9VL9LL8Wf4Wr4uhUaMkY3mO4cp82qoBDQ5TlbEJZ0+abcuFlufoapujvv8JQLUpjwjQ7bVj7f4NSwfwr+xdnaG73rwY/s31n2M36vos9Vd6rUgfs695pX+8j9vecOX+cO6+cfuf+Pudvae78a6V8E9uMXRvsX34TiKWwMAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\DFT_HistoryAggregate&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;/DTS:Executable&gt;&lt;/layout&gt;</DTS:VariableValue>
+            DTS:DataType="8">&lt;layout version="3" compressed="true"&gt;&lt;DTS:Executable xmlns:DTS = "www.microsoft.com/SqlServer/Dts" DTS:ExecutableType = "SSIS.Package.2"&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1YXW/aMBT9K1ae0yQOCbSMII2PbpXohxrexjS5iQlWHZvGTgut9t/nhLQzpUEUbdLUwRO+du4599yTq8idMRK3X7mQIMaCJOxIkhQfMZTiwLhC0S1K8CTEd+CCSwROiYgQVSclIlRMBqfjH6etZs+B0Oh2RmjJc3nGprzb+ZKh+WwVAH00RxGRy8CATQMsUspEYEQ0K0GE2sPtcxJlXPCptMI7GuLsHmfWGZM4yZAknBUREmFhDUqKavOcx5haKk4QJY/loU9ICJze0GWwa7aSZMWonQqRULwLsfIxa1XckCWE4e3QazCLwJhJOW/btohmOEXCSl8eiXhqPxA2Xdiu4zTtBUqpzi7dnVwpzy6sup0LdbRqVEgelQDQd0zPNcBZ/C4DTMLrPng2Axjz+QhPZWA0fMs3odOyfAPYb6E1W3uhDVTr73EM+pzmKQM6pNuyHO0HTQ82auFdby/4zUK9Y1WoX4fjwv1EHQzDMbgcDcGgB5T5JWGlhTVcBalX2zJ9WMsCtvYTeysB130ldxNu6TbcTwak9vucKeOKdfSGY7rOSS2ef/wH3KXDQdXlBoQV4DBOngHfCWFdITkT3675gwLJmQSXuZyrNO53DQ1CpzCVX+ipg1n9XL3D3c5qZrXLFQglyqTSiOFI8iwwnhbti5zSnwYYsliLO2bTMVani4VT7hf/fLeE0ZOqCZukmEnxEq4CShiq8qleaONde3qkpmJ1dC19IZpdl+r31mvwtbhabkqhRUboBtOKcdpebagI6CmdY8KSHl+UhZtl8deYKkff4ysuSEEiMD6z5YrnGzm12N/oPtzsPvRODt3/kN2vpmrI8yzClQM2++8dXv6P2f5XXzD1E8Dz/YMF/h8LbBqg4TcOBviYBlj/rq11gOvDgwP+RQfY2kWHWulXIPbzxUr3FzJnsDdjEQAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\DFT_F76B011&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO2WXW/aMBSG/4rl6zSJA+EjI1w0wIZEadVwN6bKDSZYdWwaOyt02n+fCaFz2JiqsU2a1FzZr4/P89onttybYfnwQUgFFkTSlF8ompELjjMSwhucPOCUzGPyCKZCYTCiMsFMRypMmSz1UbuF0OV8MLrbt+5ilcJ+b4K3olBjvhT93vscr1d7AUR4jROqtiHsQLDJGJchTFheAqUeIsEVTXIhxVLZ8SOLSf6Z5PaYK5LmWFHBdwpNiLQHpV09eCUWhNlap5jR5zLoHZaSZPdsG742W+mxchRkUqaMvMZYOc3er23IU8rJr9E1zCaEK6XWgePIZEUyLO3sZUoiMueJ8uXG8Vy35WxwxvSuTvVSq42M6bN2iPy21fQgGC9+v1rz68kQDC5BLIo8IRDMxHpClkon79i+5ds+BM7P0J3G+ej4NgKn8JrsGh+ykNs+acb7A2YGw3gGVKoMDw1twvLc7iluF52PrRN9pIkNhCricJEeiOdA7BusVvLjrXgCkSi4AteFWuuc3icD3W1b3g4PTawdFfrP7ff2ZyIoeyBWOFeR4JwkSuQh/LIJpgVjXyEY8oWhu1bLhfvoXcctx3ct3ysxZlJ9gtOMcCVf5EqIBGM6nz6txu1hzJ7oU1eF1tLvts85ler70DG8puvuj1thKBN8T5g8SLptmHXqkw+hhvbXy4uOyoua3bfy/rflrV2UVYmPCtxsv9X3H9bXMZ42umc+epzDu6r/DVOez+tiCQAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\Seq F7611B\DF_F7611B_Stg&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1YXW/aMBT9K1ae0yQOcSiMIA1Kt0r0Qw1v6zS5wQSrjk1jp4VO++9zArQJJROlL1MLT/he55577zn+kDsjLO++C6nAmEga8yNFE3LEcUIC4wpHdzgmNyG5BxdCYXBKZYSZnqkwZfLm5PTXadOHDuwZ3c4QL0SmzvhEdDvfUjybLg2gj2c4omoRGNA3wDxhXAZGxNICQ2ofaZ/TKBVSTJQV3rOQpA8ktc64InGKFRU8t9CISOukyFA7z8WYMEvbKWb0qZj0BUtJklu2CHaNViS5yqidSBkzsktixWfWsrgBjykn/4auwMwDY6rUrG3bMpqSBEsref4kEon9SPlkbruO49tznLBydsnuyRXt2SWrbudCT10RFdIn3QDo+abnGuBs/Bb+b0axetYCGInZkExUYLiOhZyXHzSbsGUhA9jbgH24D/AJ1u6+4LooqdktgUPPdJ16OHS8F5zW3AMZa0SWJRU0ZCGzAWEt3n59DdNoW181jInqoFqtvZBEqkoQHrKcCnUI1gLCprsX4nUfbK/vuCIbDQ6dZr1umu8nEsAylXCjdA826kvfT0aDcAS2rxlUrb1l+nBd+2Acr9HfhmddYTWVPzbWCrjM1CxTP0vgLU8Ly0W5istwVj/Tu0a3s9wl28UIhAqnSkfjJFIiDYzf8/ZFxtgfAwz4uGR3TN8xlrPzgVP483/ILWDKQfWeHieEK/lsXhk0TUzHy7N+OVBKXw/1PryaWgmft82uC/Xi2gSv2PXwdStKliG+JWyVcdJeOrQF9ETGx5THPTEvCjeL4q8J0+fQA7kSkuZJBMZXvljmuSVmyfZ+/vMlXkN6damj5kEAH1EA1+JRr/+Mr1UA3A0dVPc9H7UOOvgUOoCvDgHoHbj/kNxfDgfgpAdCkaURqbsCeIcD4EOSv3Hr3eEu4CF0kMKnkcKrc6CihQZqHLTwP2rBLj246VH5Kc5ev+91/wLg1S6b6hMAAA==]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\DF_F76101B&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1aXXPiNhT9Kx4/g7FkyR80MLMBdpsO2c3EvHU7jGIU4oltUUveJdnpf69scGIH5JAd0japecK60tHRPfdeCeGTGeG3vzIutAXl4TLpijCm3YTEdKBfkOCWLOnX8cf5R4wRMAHWhydTcscycZZcs+HJp5SsbjYN2oisSBCKu4FuQV1bx1HCB3oQpQUYlzbaPw+DlHF2LQz/z8in6TeaGmeJoMuUiJAleUsYUG6MCyrSeM4WNDJke0ii8L7o9AvhnMZX0d3gULSC5JZRP+Z8GdFDiBXDjM3iJskyTGjz1LVp1gP9RohVv9fjwQ2NCTfihyEBi3vfw+R63YOmaffWJI6q7OLDyRXuOYTV8OSz7LoVyg/vpQMABh0khTpb7BX6q58Gj6prM7aa0msx0CF2DNzBhmzr7UOFViPqeRaJMCBcVCEdICFdCJSgjtNM9XKkqegiJLGB6aixzUbsT1T4JKL8kq5kVAY1aLeDgKUGxo3As7k/+3A59y8mo7OJX8FFnldQhkonQ7PZH+OJP9PU+K7k3PFgA3PveXgx5ysahJT7qyisqYmeg0fN7NXI+FnHPBN9vy3ofEwEnY9YIpODyyox9wVdgeoseRx2MFCHOELN0ShIOvc3S6jhGmblAxsX4jUr4LO05phCUQd4SsreMwEzmpdBPpJjZ2kYV+GtPIcsoMzPn3U73HG7DRoS9YCgV/he+rnieuA0hqfdXBflQoj2uJBafEK5BGiWMkwWyxJaAWZcEHHDf8/l1L5kYpWJPyp4lmV1HDv3ehXLGGWysA9PNhtZv3gq1i0kqYQGgqUD/ce6/zmLor90bZIsKu1mxzb1Te/8wSzs+becul4HldvuMqaJ4A/N24YRiyKJJxdf2fMro6dyq9x2rcHnPumpoB5NTyevtcvHXVdUWqbkikZbxnF/Y5At2inLkkWYLE/Zulh4p1j8JY3kUeEbvWA8zEkM9A/J3YbnHsxK2wvEvWTfZbhkSamwZlU1xq4MRhu3Gr8vjSF4msityO9P5KrGHnqyvR9dcHn68aoflfyo1ulVQ6E+VRsWRVjspD5AXpv6b1rjL9OJNj7VfJalAVWc1JDTivymRX64migTGdUkNpEBcce1rWPK3IXAzGFts7Z7gD3Sl11zhWpdXy8YgG24yHVN27JtEzlu4fCHya7C4JTehzQtR12wMBFg/8DCBnMbNPfaLLlCtMfYUxPsQtPOPdI0qIGmenhJtnR5A+WyB3oRb4WSbd7tnqvy0nrkpGtr67+vcf2QZAPDOXpthRBvSuserbe2Vxb8SRl0frZ+Og3103ksRjvl02ksQ/mN225xO5SkcnTJdOtiNd2yA3oR50fd/p+ZNGXsNltp50QEN6qTKG6vGo4uche5BvCA5doOcJ0irhHCFpDR6NmG5ULHsZAlDQAYtunJb/9MPIxpKmdYyJ+gURYniojAuP1x8rbTfq/MOzcNFm4PSu9Q550DsY3bG6U3rnP9X0RF3Ya4/ffvP6lzr/Lik3yqvhLVK1+oGv4NVio2mFslAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\DF_F5541015&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO2YXW/aMBSG/4qVa5rEIQmUEaQtwNaJ0qrhbp2QG0yw6tg0dlrotP8+J0DntE1VFW1SK7iyjz/eN+cxJx/dCRLX37iQYIYFSdiRJCk+YijFgXGO4muU4MsI34AxlwgMiYgRVTMlIlSU8WHLh/DLZX843bSMXneE1jyXJ2zOe92vGVouNgEQoiWKiVwHBvQNsEopE4ER06xUE2oMd05JnHHB59KMbmiEs1ucmSdM4iRDknBWREiMhdkvvarBUz7D1FRxgii5Lyd9QkLg9Iqug9fuVprcOuqkQiQUv8ZYuczcXNyAJYThl6UrMqvAWEi57FiWiBc4RcJMH5bEPLXuCJuvLMe2fWuFUqrSOlaXus1kRO6VQ+gcN1zHACezt6G6DHm6zCUWBpjw5QjPZWA0W40mhKZnAOs5xaa3n+JEHa6zeR+tdUnXtLUfbHjQqzVw7OxnILoIwef+GRgPJiDieRZjzYmSrTqBdqvWiefu56QfTvtIosl6WQHguKbXcOzjet32nro4m37vDwrxqrBTuXrYcGGz1oTb2s/EeDi9wEueScIS3UP70VFowfpE+P5+HmqPAWwrBPVHsG3vCWAQTUBNAoq/XiUBPtydwMEs2Rl5q7R5juRC/LjgdyDkOZPgLJeqAADnp27BVh4avlckXlc1w1xVsV53Ux87ZQ9EEmUy5IzhWPIsMH6tOuOc0t8GGLCZFrcbvm1sZhcduxwvWp5TyuibqmqepJhJ8RDeBkJOqdpPVW7tVqKtHqkKvJ1a2b7InlW31d+hx+KVuOo+TYUWGaErTMUupNqaWau6eDdVi/1TuvApXege6L5Puqp6k1s8U4RpnrIXEHte64D44yB+hrDreQfCH4fwU8BNr3kA/D4Bqwd7RZeptz5RqNcRdjx4IPwuCVdfHmoBu4eb8P/ka2mfm1RP/xBl7b5z9f4AUzFtl/ISAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\Seq F7611B\DF_F7611B&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1X3W7aMBh9FSvXaRIHQltGkCBQQKIFkdxs64TcYIJVx2ax00KnvfuchHbuDxtoN1NVrvD57HOOv+NYSStC4nbIhQQLLEjCTiRJ8QlDKfaNKYpvUYKvexfRvHcx72bogdAhEZJn206SZDhBEhvt1hhteS5HbMnbrUGG1qsKAAFao5jIrW/AhgE2KWXCN2KalfRC1XDzksQZF3wprfA7DXF2hzNrxCROMiQJZwVCYiysXmlOFS/5AlNL4QRR8lBO+oSEwOkN3fqHspUmd46aqRAJxYcYK5dZ1eb6LCEM/1n6mczGN1ZSrpu2LeIVTpGw0qclMU/te8KWG9t1nIa9QSnV3aWHmyvbc4irdutKTd0FFZIH1QB4dmrWXQOMFgdGfx1mMahKgTpBRVnVDBDx9RgvpW8oQs/yDGC/oebC2rFqswD8TfG0bkLndJ9mDR67wyiR82lnOO/OOl9G42ASRsNRGE1mnzuDwaw/6ER9Tdx1LUf7QbMOa3uteM6RVnr9MAJH+VG91/3UzBqE+/zABjzWD5IIBJypMyXUw6XpQscxXed8J9VfJI9SB5NbUyRX4utk3Ae9Lgh5nsUYTHK5zuU3XejMsTyzXuSt61hBrk56u1U92c1yBEKJMqnsMhwrKd/4sWle5ZT+NECfLTTcMRuOUc0uBk5ZL/55bimjk6p7KEkxk+IJ3gEBp1TxqbZol6C2eqzujt3UZ/RFv+x9VL9LL8Wf4Wr4uhUaMkY3mO4cp82qoBDQ5TlbEJZ0+abcuFlufoapujvv8JQLUpjwjQ7bVj7f4NSwfwr+xdnaG73rwY/s31n2M36vos9Vd6rUgfs695pX+8j9vecOX+cO6+cfuf+Pudvae78a6V8E9uMXRvsX34TiKWwMAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Clean and Transform Data&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;/DTS:Executable&gt;&lt;/layout&gt;</DTS:VariableValue>
         </DTS:Variable>
         <DTS:Variable
           DTS:CreationName=""
@@ -2467,7 +2467,7 @@ FROM [dbo].[DFT_EMPLOYEES] a
           DTS:Namespace="User"
           DTS:ObjectName="varSSISOps_TaskList">
           <DTS:VariableValue
-            DTS:DataType="8">&lt;xml AuditControlFlowVersion="6" EnableRowCountLogging="True" EnableRowCountLoggingForSource="True" EnableRowCountLoggingForDestination="True" EnableDataFlowMonitoring="True" MaxIterationCount="0" TrackAllVariables="True" TrackOnlyTagVariables="False" EnableVariableChangeTracking="True" EnableVariableChangeTrackingAdvFeatures="True" EnableVariableChangeTrackingAdvFeaturesADORec="False" LogConnectionMgrs="True"&gt;&lt;tsk id="{054E19EB-9873-4226-AC13-753F13E21361}" typ="SQLTask" p="" name="Create NF Temp Tables" on="1" /&gt;&lt;tsk id="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" typ="SQLTask" p="" name="Create Temp Tables" on="1" /&gt;&lt;tsk id="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" typ="PipelineTask" p="" name="DF_F5541015" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_2" /&gt;&lt;com id="44" dir="TRAN" typ="trnderivedcolumn" name="DC_SalesRepCodeTrim" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_44" /&gt;&lt;com id="53" dir="TRAN" typ="trnrowcount" name="DEST Star_Species" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_53" /&gt;&lt;com id="57" dir="TRAN" typ="trnrowcount" name="DEST t_speciesSplit" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_57" /&gt;&lt;com id="61" dir="TRAN" typ="trnrowcount" name="DEST T_STAR_SPECIES" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_61" /&gt;&lt;com id="65" dir="TRAN" typ="trnlookup" name="GetSalesRepDesc" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_65" /&gt;&lt;com id="90" dir="TRAN" typ="trnderivedcolumn" name="Jde_Date_Conversion_Step1" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_90" /&gt;&lt;com id="117" dir="TRAN" typ="trnderivedcolumn" name="Jde_Date_Conversion_Step2" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_117" /&gt;&lt;com id="150" dir="TRAN" typ="trnmulticast" name="Multicast" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_150" /&gt;&lt;com id="156" dir="TRAN" typ="trnsort" name="Sort" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_156" /&gt;&lt;com id="291" dir="TRAN" typ="trnrowcount" name="SRC Src_F5541015" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_291" /&gt;&lt;com id="295" dir="SRC" typ="srcoledb" name="Src_F5541015" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_295" /&gt;&lt;com id="346" dir="DEST" typ="desoledb" name="Star_Species" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_346" /&gt;&lt;com id="383" dir="DEST" typ="desoledb" name="t_speciesSplit" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_383" /&gt;&lt;com id="420" dir="DEST" typ="desoledb" name="T_STAR_SPECIES" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_420" /&gt;&lt;dp id="457" val="0" ann="" c1="2" c2="44"/&gt;&lt;dp id="458" val="0" ann="" c1="90" c2="117"/&gt;&lt;dp id="459" val="0" ann="" c1="44" c2="65"/&gt;&lt;dp id="460" val="0" ann="" c1="117" c2="156"/&gt;&lt;dp id="461" val="0" ann="" c1="65" c2="90"/&gt;&lt;dp id="462" val="0" ann="" c1="150" c2="61"/&gt;&lt;dp id="463" val="0" ann="" c1="150" c2="57"/&gt;&lt;dp id="464" val="0" ann="" c1="150" c2="53"/&gt;&lt;dp id="465" val="0" ann="" c1="295" c2="291"/&gt;&lt;dp id="466" val="0" ann="" c1="291" c2="2"/&gt;&lt;dp id="467" val="0" ann="" c1="57" c2="383"/&gt;&lt;dp id="468" val="0" ann="" c1="53" c2="346"/&gt;&lt;dp id="469" val="0" ann="" c1="61" c2="420"/&gt;&lt;dp id="470" val="0" ann="" c1="156" c2="150"/&gt;&lt;/tsk&gt;&lt;tsk id="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" typ="PipelineTask" p="" name="DFT_HistoryAggregate" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_2" /&gt;&lt;com id="12" dir="TRAN" typ="trnrowcount" name="DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_12" /&gt;&lt;com id="16" dir="SRC" typ="srcoledb" name="Src DFTCostHistAgg" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_16" /&gt;&lt;com id="49" dir="TRAN" typ="trnrowcount" name="SRC Src DFTCostHistAgg" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_49" /&gt;&lt;com id="53" dir="DEST" typ="desoledb" name="Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_53" /&gt;&lt;dp id="82" val="0" ann="" c1="2" c2="12"/&gt;&lt;dp id="83" val="0" ann="" c1="16" c2="49"/&gt;&lt;dp id="84" val="0" ann="" c1="49" c2="2"/&gt;&lt;dp id="85" val="0" ann="" c1="12" c2="53"/&gt;&lt;/tsk&gt;&lt;tsk id="{849D94BB-B0AC-4026-8D36-3E49E5FEF3A4}" typ="SQLTask" p="" name="NotaFiscalTableSwap" on="1" /&gt;&lt;tsk id="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" typ="SequenceContainer" p="" name="Seq Nota Fiscal details" on="1" /&gt;&lt;tsk id="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}" typ="PipelineTask" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="DF_F76101B" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_2" /&gt;&lt;com id="248" dir="TRAN" typ="trnderivedcolumn" name="Derived Column" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_248" /&gt;&lt;com id="274" dir="TRAN" typ="trnderivedcolumn" name="Derived Column 1" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_274" /&gt;&lt;com id="357" dir="TRAN" typ="trnrowcount" name="DEST Tgt_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_357" /&gt;&lt;com id="361" dir="TRAN" typ="trnsort" name="Sort" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_361" /&gt;&lt;com id="666" dir="TRAN" typ="trnrowcount" name="SRC Src_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_666" /&gt;&lt;com id="670" dir="SRC" typ="srcoledb" name="Src_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_670" /&gt;&lt;com id="865" dir="DEST" typ="desoledb" name="Tgt_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_865" /&gt;&lt;dp id="1002" val="0" ann="" c1="2" c2="248"/&gt;&lt;dp id="1003" val="0" ann="" c1="274" c2="361"/&gt;&lt;dp id="1004" val="0" ann="" c1="248" c2="274"/&gt;&lt;dp id="1005" val="0" ann="" c1="670" c2="666"/&gt;&lt;dp id="1006" val="0" ann="" c1="666" c2="2"/&gt;&lt;dp id="1007" val="0" ann="" c1="357" c2="865"/&gt;&lt;dp id="1008" val="0" ann="" c1="361" c2="357"/&gt;&lt;/tsk&gt;&lt;tsk id="{D681486D-8DF6-4E77-BE07-F69AB90DC603}" typ="PipelineTask" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="DFT_F76B011" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_2" /&gt;&lt;com id="136" dir="TRAN" typ="trnderivedcolumn" name="Derived Column" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_136" /&gt;&lt;com id="167" dir="TRAN" typ="trnderivedcolumn" name="Derived Column 1" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_167" /&gt;&lt;com id="177" dir="TRAN" typ="trnrowcount" name="DEST OLE DB Destination" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_177" /&gt;&lt;com id="181" dir="SRC" typ="srcoledb" name="F76B011" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_181" /&gt;&lt;com id="292" dir="DEST" typ="desoledb" name="OLE DB Destination" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_292" /&gt;&lt;com id="373" dir="TRAN" typ="trnrowcount" name="SRC F76B011" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_373" /&gt;&lt;dp id="377" val="0" ann="" c1="2" c2="136"/&gt;&lt;dp id="378" val="0" ann="" c1="136" c2="167"/&gt;&lt;dp id="379" val="0" ann="" c1="167" c2="177"/&gt;&lt;dp id="380" val="0" ann="" c1="181" c2="373"/&gt;&lt;dp id="381" val="0" ann="" c1="373" c2="2"/&gt;&lt;dp id="382" val="0" ann="" c1="177" c2="292"/&gt;&lt;/tsk&gt;&lt;tsk id="{42B96C54-985C-40D7-99C5-894B758B3491}" typ="SequenceContainer" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="Seq F7611B" on="1" /&gt;&lt;pc id="{475C9757-79F7-4C66-A9E9-5090BCE62E49}" op="2" and="True" val="0" task1="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}" task2="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}" p="{42B96C54-985C-40D7-99C5-894B758B3491}" refId="Package\Seq Nota Fiscal details\Seq F7611B.PrecedenceConstraints[Constraint]"/&gt;&lt;tsk id="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}" typ="PipelineTask" p="{42B96C54-985C-40D7-99C5-894B758B3491}" name="DF_F7611B" on="1" &gt;&lt;com id="2" dir="SRC" typ="" name="ADO NET Source" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_2" /&gt;&lt;com id="356" dir="TRAN" typ="trnderivedcolumn" name="Computes" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_356" /&gt;&lt;com id="452" dir="TRAN" typ="trndataconversion" name="DC_DataTypes" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_452" /&gt;&lt;com id="910" dir="TRAN" typ="trnderivedcolumn" name="Der_JDE_Dates" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_910" /&gt;&lt;com id="936" dir="TRAN" typ="trnrowcount" name="DEST NF_Reporting" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_936" /&gt;&lt;com id="940" dir="DEST" typ="desoledb" name="NF_Reporting" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_940" /&gt;&lt;com id="1185" dir="TRAN" typ="trnrowcount" name="SRC ADO NET Source" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_1185" /&gt;&lt;com id="1189" dir="TRAN" typ="trnderivedcolumn" name="TimeOfDay" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_1189" /&gt;&lt;dp id="1199" val="0" ann="" c1="2" c2="1185"/&gt;&lt;dp id="1200" val="0" ann="" c1="452" c2="356"/&gt;&lt;dp id="1201" val="0" ann="" c1="356" c2="910"/&gt;&lt;dp id="1202" val="0" ann="" c1="910" c2="1189"/&gt;&lt;dp id="1203" val="0" ann="" c1="1189" c2="936"/&gt;&lt;dp id="1204" val="0" ann="" c1="1185" c2="452"/&gt;&lt;dp id="1205" val="0" ann="" c1="936" c2="940"/&gt;&lt;/tsk&gt;&lt;tsk id="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}" typ="PipelineTask" p="{42B96C54-985C-40D7-99C5-894B758B3491}" name="DF_F7611B_Stg" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trnrowcount" name="DEST tgt" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_2" /&gt;&lt;com id="6" dir="SRC" typ="srcoledb" name="OLE DB Source" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_6" /&gt;&lt;com id="363" dir="TRAN" typ="trnrowcount" name="SRC OLE DB Source" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_363" /&gt;&lt;com id="367" dir="DEST" typ="desoledb" name="tgt" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_367" /&gt;&lt;dp id="612" val="0" ann="" c1="6" c2="363"/&gt;&lt;dp id="613" val="0" ann="" c1="363" c2="2"/&gt;&lt;dp id="614" val="0" ann="" c1="2" c2="367"/&gt;&lt;/tsk&gt;&lt;tsk id="{01A9935F-F76A-4505-9190-68F81CB871A0}" typ="SQLTask" p="" name="SpeciesTableSwap" on="1" /&gt;&lt;tsk id="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}" typ="SQLTask" p="" name="Table Create" on="1" /&gt;&lt;tsk id="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" typ="SQLTask" p="" name="Table Swap" on="1" /&gt;&lt;pc id="{0BDFD2D8-E3CC-4728-A98E-38C49935DDD5}" op="2" and="True" val="0" task1="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" task2="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" p="" refId="Package.PrecedenceConstraints[Constraint 1]"/&gt;&lt;pc id="{AA8D6A70-4488-45BE-B3A2-3FB54A3D8514}" op="2" and="True" val="0" task1="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}" task2="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" p="" refId="Package.PrecedenceConstraints[Constraint 2]"/&gt;&lt;pc id="{675D91F2-5106-49D1-AD7C-7380ABC98AF1}" op="2" and="True" val="0" task1="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" task2="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" p="" refId="Package.PrecedenceConstraints[Constraint 3]"/&gt;&lt;pc id="{5C8C2BA9-F8BB-48E1-A709-14B8F6F21C6D}" op="2" and="True" val="0" task1="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" task2="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" p="" refId="Package.PrecedenceConstraints[Constraint 4]"/&gt;&lt;pc id="{CD03C9AD-4D54-43BE-85BA-87EEF780090E}" op="2" and="True" val="0" task1="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" task2="{01A9935F-F76A-4505-9190-68F81CB871A0}" p="" refId="Package.PrecedenceConstraints[Constraint 5]"/&gt;&lt;pc id="{60F9E2B3-A2E1-4120-8546-1FE32AFD184F}" op="2" and="True" val="0" task1="{01A9935F-F76A-4505-9190-68F81CB871A0}" task2="{054E19EB-9873-4226-AC13-753F13E21361}" p="" refId="Package.PrecedenceConstraints[Constraint 6]"/&gt;&lt;pc id="{3431E6ED-B47C-47EC-8B87-B06708B3AC82}" op="2" and="True" val="0" task1="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" task2="{849D94BB-B0AC-4026-8D36-3E49E5FEF3A4}" p="" refId="Package.PrecedenceConstraints[Constraint 7]"/&gt;&lt;pc id="{4F5870A7-3FEA-48F0-A442-AADF1443F40F}" op="2" and="True" val="0" task1="{054E19EB-9873-4226-AC13-753F13E21361}" task2="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" p="" refId="Package.PrecedenceConstraints[Constraint 8]"/&gt;&lt;/xml&gt;</DTS:VariableValue>
+            DTS:DataType="8">&lt;xml AuditControlFlowVersion="6" EnableRowCountLogging="True" EnableRowCountLoggingForSource="True" EnableRowCountLoggingForDestination="True" EnableDataFlowMonitoring="True" MaxIterationCount="0" TrackAllVariables="True" TrackOnlyTagVariables="False" EnableVariableChangeTracking="True" EnableVariableChangeTrackingAdvFeatures="True" EnableVariableChangeTrackingAdvFeaturesADORec="False" LogConnectionMgrs="True"&gt;&lt;tsk id="{054E19EB-9873-4226-AC13-753F13E21361}" typ="SQLTask" p="" name="Create NF Temp Tables" on="1" /&gt;&lt;tsk id="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" typ="SQLTask" p="" name="Create Temp Tables" on="1" /&gt;&lt;tsk id="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" typ="PipelineTask" p="" name="DF_F5541015" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_2" /&gt;&lt;com id="44" dir="TRAN" typ="trnderivedcolumn" name="DC_SalesRepCodeTrim" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_44" /&gt;&lt;com id="53" dir="TRAN" typ="trnrowcount" name="DEST Star_Species" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_53" /&gt;&lt;com id="57" dir="TRAN" typ="trnrowcount" name="DEST t_speciesSplit" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_57" /&gt;&lt;com id="61" dir="TRAN" typ="trnrowcount" name="DEST T_STAR_SPECIES" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_61" /&gt;&lt;com id="65" dir="TRAN" typ="trnlookup" name="GetSalesRepDesc" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_65" /&gt;&lt;com id="90" dir="TRAN" typ="trnderivedcolumn" name="Jde_Date_Conversion_Step1" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_90" /&gt;&lt;com id="117" dir="TRAN" typ="trnderivedcolumn" name="Jde_Date_Conversion_Step2" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_117" /&gt;&lt;com id="150" dir="TRAN" typ="trnmulticast" name="Multicast" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_150" /&gt;&lt;com id="156" dir="TRAN" typ="trnsort" name="Sort" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_156" /&gt;&lt;com id="291" dir="TRAN" typ="trnrowcount" name="SRC Src_F5541015" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_291" /&gt;&lt;com id="295" dir="SRC" typ="srcoledb" name="Src_F5541015" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_295" /&gt;&lt;com id="346" dir="DEST" typ="desoledb" name="Star_Species" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_346" /&gt;&lt;com id="383" dir="DEST" typ="desoledb" name="t_speciesSplit" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_383" /&gt;&lt;com id="420" dir="DEST" typ="desoledb" name="T_STAR_SPECIES" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_420" /&gt;&lt;dp id="457" val="0" ann="" c1="2" c2="44"/&gt;&lt;dp id="458" val="0" ann="" c1="90" c2="117"/&gt;&lt;dp id="459" val="0" ann="" c1="44" c2="65"/&gt;&lt;dp id="460" val="0" ann="" c1="117" c2="156"/&gt;&lt;dp id="461" val="0" ann="" c1="65" c2="90"/&gt;&lt;dp id="462" val="0" ann="" c1="150" c2="61"/&gt;&lt;dp id="463" val="0" ann="" c1="150" c2="57"/&gt;&lt;dp id="464" val="0" ann="" c1="150" c2="53"/&gt;&lt;dp id="465" val="0" ann="" c1="295" c2="291"/&gt;&lt;dp id="466" val="0" ann="" c1="291" c2="2"/&gt;&lt;dp id="467" val="0" ann="" c1="57" c2="383"/&gt;&lt;dp id="468" val="0" ann="" c1="53" c2="346"/&gt;&lt;dp id="469" val="0" ann="" c1="61" c2="420"/&gt;&lt;dp id="470" val="0" ann="" c1="156" c2="150"/&gt;&lt;/tsk&gt;&lt;tsk id="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" typ="PipelineTask" p="" name="Clean and Transform Data" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_2" /&gt;&lt;com id="12" dir="TRAN" typ="trnrowcount" name="DEST Tgt_PAH_DFTCOSTHISTORYAGGREGATE" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_12" /&gt;&lt;com id="16" dir="SRC" typ="srcoledb" name="Src DFTCostHistAgg" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_16" /&gt;&lt;com id="49" dir="TRAN" typ="trnrowcount" name="SRC Src DFTCostHistAgg" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_49" /&gt;&lt;com id="53" dir="DEST" typ="desoledb" name="Tgt_PAH_DFTCOSTHISTORYAGGREGATE" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_53" /&gt;&lt;dp id="82" val="0" ann="" c1="2" c2="12"/&gt;&lt;dp id="83" val="0" ann="" c1="16" c2="49"/&gt;&lt;dp id="84" val="0" ann="" c1="49" c2="2"/&gt;&lt;dp id="85" val="0" ann="" c1="12" c2="53"/&gt;&lt;/tsk&gt;&lt;tsk id="{849D94BB-B0AC-4026-8D36-3E49E5FEF3A4}" typ="SQLTask" p="" name="NotaFiscalTableSwap" on="1" /&gt;&lt;tsk id="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" typ="SequenceContainer" p="" name="Seq Nota Fiscal details" on="1" /&gt;&lt;tsk id="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}" typ="PipelineTask" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="DF_F76101B" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_2" /&gt;&lt;com id="248" dir="TRAN" typ="trnderivedcolumn" name="Derived Column" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_248" /&gt;&lt;com id="274" dir="TRAN" typ="trnderivedcolumn" name="Derived Column 1" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_274" /&gt;&lt;com id="357" dir="TRAN" typ="trnrowcount" name="DEST Tgt_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_357" /&gt;&lt;com id="361" dir="TRAN" typ="trnsort" name="Sort" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_361" /&gt;&lt;com id="666" dir="TRAN" typ="trnrowcount" name="SRC Src_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_666" /&gt;&lt;com id="670" dir="SRC" typ="srcoledb" name="Src_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_670" /&gt;&lt;com id="865" dir="DEST" typ="desoledb" name="Tgt_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_865" /&gt;&lt;dp id="1002" val="0" ann="" c1="2" c2="248"/&gt;&lt;dp id="1003" val="0" ann="" c1="274" c2="361"/&gt;&lt;dp id="1004" val="0" ann="" c1="248" c2="274"/&gt;&lt;dp id="1005" val="0" ann="" c1="670" c2="666"/&gt;&lt;dp id="1006" val="0" ann="" c1="666" c2="2"/&gt;&lt;dp id="1007" val="0" ann="" c1="357" c2="865"/&gt;&lt;dp id="1008" val="0" ann="" c1="361" c2="357"/&gt;&lt;/tsk&gt;&lt;tsk id="{D681486D-8DF6-4E77-BE07-F69AB90DC603}" typ="PipelineTask" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="DFT_F76B011" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_2" /&gt;&lt;com id="136" dir="TRAN" typ="trnderivedcolumn" name="Derived Column" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_136" /&gt;&lt;com id="167" dir="TRAN" typ="trnderivedcolumn" name="Derived Column 1" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_167" /&gt;&lt;com id="177" dir="TRAN" typ="trnrowcount" name="DEST OLE DB Destination" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_177" /&gt;&lt;com id="181" dir="SRC" typ="srcoledb" name="F76B011" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_181" /&gt;&lt;com id="292" dir="DEST" typ="desoledb" name="OLE DB Destination" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_292" /&gt;&lt;com id="373" dir="TRAN" typ="trnrowcount" name="SRC F76B011" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_373" /&gt;&lt;dp id="377" val="0" ann="" c1="2" c2="136"/&gt;&lt;dp id="378" val="0" ann="" c1="136" c2="167"/&gt;&lt;dp id="379" val="0" ann="" c1="167" c2="177"/&gt;&lt;dp id="380" val="0" ann="" c1="181" c2="373"/&gt;&lt;dp id="381" val="0" ann="" c1="373" c2="2"/&gt;&lt;dp id="382" val="0" ann="" c1="177" c2="292"/&gt;&lt;/tsk&gt;&lt;tsk id="{42B96C54-985C-40D7-99C5-894B758B3491}" typ="SequenceContainer" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="Seq F7611B" on="1" /&gt;&lt;pc id="{475C9757-79F7-4C66-A9E9-5090BCE62E49}" op="2" and="True" val="0" task1="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}" task2="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}" p="{42B96C54-985C-40D7-99C5-894B758B3491}" refId="Package\Seq Nota Fiscal details\Seq F7611B.PrecedenceConstraints[Constraint]"/&gt;&lt;tsk id="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}" typ="PipelineTask" p="{42B96C54-985C-40D7-99C5-894B758B3491}" name="DF_F7611B" on="1" &gt;&lt;com id="2" dir="SRC" typ="" name="ADO NET Source" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_2" /&gt;&lt;com id="356" dir="TRAN" typ="trnderivedcolumn" name="Computes" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_356" /&gt;&lt;com id="452" dir="TRAN" typ="trndataconversion" name="DC_DataTypes" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_452" /&gt;&lt;com id="910" dir="TRAN" typ="trnderivedcolumn" name="Der_JDE_Dates" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_910" /&gt;&lt;com id="936" dir="TRAN" typ="trnrowcount" name="DEST NF_Reporting" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_936" /&gt;&lt;com id="940" dir="DEST" typ="desoledb" name="NF_Reporting" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_940" /&gt;&lt;com id="1185" dir="TRAN" typ="trnrowcount" name="SRC ADO NET Source" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_1185" /&gt;&lt;com id="1189" dir="TRAN" typ="trnderivedcolumn" name="TimeOfDay" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_1189" /&gt;&lt;dp id="1199" val="0" ann="" c1="2" c2="1185"/&gt;&lt;dp id="1200" val="0" ann="" c1="452" c2="356"/&gt;&lt;dp id="1201" val="0" ann="" c1="356" c2="910"/&gt;&lt;dp id="1202" val="0" ann="" c1="910" c2="1189"/&gt;&lt;dp id="1203" val="0" ann="" c1="1189" c2="936"/&gt;&lt;dp id="1204" val="0" ann="" c1="1185" c2="452"/&gt;&lt;dp id="1205" val="0" ann="" c1="936" c2="940"/&gt;&lt;/tsk&gt;&lt;tsk id="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}" typ="PipelineTask" p="{42B96C54-985C-40D7-99C5-894B758B3491}" name="DF_F7611B_Stg" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trnrowcount" name="DEST tgt" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_2" /&gt;&lt;com id="6" dir="SRC" typ="srcoledb" name="OLE DB Source" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_6" /&gt;&lt;com id="363" dir="TRAN" typ="trnrowcount" name="SRC OLE DB Source" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_363" /&gt;&lt;com id="367" dir="DEST" typ="desoledb" name="tgt" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_367" /&gt;&lt;dp id="612" val="0" ann="" c1="6" c2="363"/&gt;&lt;dp id="613" val="0" ann="" c1="363" c2="2"/&gt;&lt;dp id="614" val="0" ann="" c1="2" c2="367"/&gt;&lt;/tsk&gt;&lt;tsk id="{01A9935F-F76A-4505-9190-68F81CB871A0}" typ="SQLTask" p="" name="SpeciesTableSwap" on="1" /&gt;&lt;tsk id="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}" typ="SQLTask" p="" name="Table Create" on="1" /&gt;&lt;tsk id="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" typ="SQLTask" p="" name="Table Swap" on="1" /&gt;&lt;pc id="{0BDFD2D8-E3CC-4728-A98E-38C49935DDD5}" op="2" and="True" val="0" task1="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" task2="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" p="" refId="Package.PrecedenceConstraints[Constraint 1]"/&gt;&lt;pc id="{AA8D6A70-4488-45BE-B3A2-3FB54A3D8514}" op="2" and="True" val="0" task1="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}" task2="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" p="" refId="Package.PrecedenceConstraints[Constraint 2]"/&gt;&lt;pc id="{675D91F2-5106-49D1-AD7C-7380ABC98AF1}" op="2" and="True" val="0" task1="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" task2="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" p="" refId="Package.PrecedenceConstraints[Constraint 3]"/&gt;&lt;pc id="{5C8C2BA9-F8BB-48E1-A709-14B8F6F21C6D}" op="2" and="True" val="0" task1="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" task2="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" p="" refId="Package.PrecedenceConstraints[Constraint 4]"/&gt;&lt;pc id="{CD03C9AD-4D54-43BE-85BA-87EEF780090E}" op="2" and="True" val="0" task1="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" task2="{01A9935F-F76A-4505-9190-68F81CB871A0}" p="" refId="Package.PrecedenceConstraints[Constraint 5]"/&gt;&lt;pc id="{60F9E2B3-A2E1-4120-8546-1FE32AFD184F}" op="2" and="True" val="0" task1="{01A9935F-F76A-4505-9190-68F81CB871A0}" task2="{054E19EB-9873-4226-AC13-753F13E21361}" p="" refId="Package.PrecedenceConstraints[Constraint 6]"/&gt;&lt;pc id="{3431E6ED-B47C-47EC-8B87-B06708B3AC82}" op="2" and="True" val="0" task1="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" task2="{849D94BB-B0AC-4026-8D36-3E49E5FEF3A4}" p="" refId="Package.PrecedenceConstraints[Constraint 7]"/&gt;&lt;pc id="{4F5870A7-3FEA-48F0-A442-AADF1443F40F}" op="2" and="True" val="0" task1="{054E19EB-9873-4226-AC13-753F13E21361}" task2="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" p="" refId="Package.PrecedenceConstraints[Constraint 8]"/&gt;&lt;/xml&gt;</DTS:VariableValue>
         </DTS:Variable>
         <DTS:Variable
           DTS:CreationName=""
