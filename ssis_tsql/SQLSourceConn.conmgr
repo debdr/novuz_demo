@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SQLSourceConn"
+  DTS:DTSID="{83863046-F4AB-407C-83AF-5BE7C039B488}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::SQL_Database]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::SQL_Host]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.;Initial Catalog=nvz_profiler;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-{83863046-F4AB-407C-83AF-5BE7C039B488}SQLSourceConn;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

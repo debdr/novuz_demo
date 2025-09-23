@@ -1,0 +1,425 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/5/2019 1:12:34 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DFT-SSIS-DEV-01"
+  DTS:CreatorName="AMER\Demo2"
+  DTS:DTSID="{66A35FBD-81B7-42EE-9B9B-ACD199F594ED}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DataIntegration"
+  DTS:PackageType="5"
+  DTS:VersionBuild="604"
+  DTS:VersionGUID="{7644466E-C7DD-4C0A-92CC-85BB84C4AA68}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{7FF98346-83D5-4D0C-AA18-A951E7BAA2DA}"
+      DTS:ObjectName="BatchID">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">20220910_194213</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{F2A5673E-3D3A-4F72-9FDD-24BAC0142F45}"
+      DTS:ObjectName="MSD365">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{9C10A944-8545-49AF-B69F-2FFC9FD0407E}"
+      DTS:ObjectName="RefModel">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">1</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{7828F8E1-661D-45D4-92A3-01019EBB6CF1}"
+      DTS:ObjectName="SAPAdaptor">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{76A8E367-4C6F-40C5-8F07-74E245B128A4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Attachment">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8BBBBBE0-E99F-4482-909E-888EF295F398}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Attachments">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A12EE74F-2180-4668-B1E5-1984E964871B}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::BatchID]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BatchID">
+      <DTS:VariableValue
+        DTS:DataType="8">20220910_194213</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5296348C-9E56-4C64-A08E-A1E3499AFE46}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Batch_Stop_Flag">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B3601C13-60AC-454D-BAD0-09837C0E869B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="count">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7BAB0E4D-C43C-4543-9C1C-462089709734}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{155771E8-CDB3-4ECD-AF8D-12D3EE386C9B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="File">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{64BB60CC-2E20-48C6-9C3F-D508FD1FE1C2}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileBasedInputCheck">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{119EC6C1-7D89-40C4-A24F-587E5E4502AC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4E0BC85C-711C-4105-985A-2505390DB4E2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="HeaderAttachment">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B4F3D9C9-3C73-4385-B680-B9D92778C9A6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="HeaderFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">HeaderValidationResult.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DD020AE9-4427-43B4-B6A1-7D0AD4FBD853}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Log_TableCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BCEA1418-982F-4DF1-B21C-D78746CC4263}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageStatus">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B8BBAD68-0C7D-461B-B742-DA6FEDC9C0BA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::RefModel]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="RefModel">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9E019BF9-FCE8-40AA-9E92-425023DA5837}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Solution">
+      <DTS:VariableValue
+        DTS:DataType="8">OP</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F32565E3-22A1-4C72-80A1-A9383431785A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SolutionList">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5D661D6D-2ADF-45A0-919C-EEC2211489B3}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::SSIS_DFT_Upload_Directory_Name]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SQL_Download_Directory">
+      <DTS:VariableValue
+        DTS:DataType="8">F:\PMM\BatchOrchestrator_R2022.09\DataFiles\DFT_Upload\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{ECC39855-A55A-40AF-8D95-152D8FAE7D80}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SQL_Version">
+      <DTS:VariableValue
+        DTS:DataType="8">2019</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{31B560FF-5B96-47BF-B349-398B83B9FC38}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Task_ID">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{89408354-45BE-4EAB-95DE-034130DE261D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Task_Name">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F75663CD-00A1-45D2-BCD7-F9E1B85382F6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Triggered_Task_Names">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Transform IntData"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{271D8585-EA39-4612-9F2C-40B68C4E0FC5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transform IntData">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+          DTS:Name="SqlStatementSource">" select TaskName,BatchRunId from Log_Package_Perf_Status
+where Status= 'Triggered'"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+          <SQLTask:SqlTaskData
+            SQLTask:Connection="{83863046-F4AB-407C-83AF-5BE7C039B488}"
+            SQLTask:SqlStatementSource="INSERT INTO [DBO].[DFT_EMPSUMMARY] select DEPTID, count(*) AS TOTAL_EMP FROM DFT_EMPLOYEES_DIM &#xA; GROUP BY DEPTID&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+             SQLTask:ResultName="0"
+              SQLTask:DtsVariableName="User::Triggered_Task_Names" />
+          </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Principal Data"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E1A2AC62-7E66-4C51-9DCF-CAAD78BACAC2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Department Principal Data"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{83863046-F4AB-407C-83AF-5BE7C039B488}"
+          SQLTask:SqlStatementSource="USE [nvz_profiler]&#xA;GO&#xA;INSERT INTO [DBO].[DFT_DEPTSUMMARY] &#xA;SELECT b.[DEPTNAME], a.[TOTAL_EMP] FROM [DBO][DFT_DEPARTMENT] a INNER JOIN [DBO].[DFT_EMPLOYEES] b &#xA; WHERE a.[DEPTID] = b.[DEPTID]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="$Project::vendorname"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="130"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="$Project::SSIS_DFT_Download_Directory_Name"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="130"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 24]"
+      DTS:CreationName=""
+      DTS:DTSID="{39D77B8F-775B-4B1D-BB96-B47AA314D23E}"
+      DTS:From="Package\Transform IntData"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 24"
+      DTS:To="Package\Load Department Principal Data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnTaskFailed]"
+      DTS:CreationName="OnTaskFailed"
+      DTS:DTSID="{230E97F6-D9DF-40DD-B970-3E555947BC81}"
+      DTS:EventID="0"
+      DTS:EventName="OnTaskFailed"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{DE94D9CD-60A2-48E5-8F7A-8266407F1A41}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnTaskFailed]\Get Failed Task Name"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{271D8585-EA39-4612-9F2C-40B68C4E0FC5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Get Failed Task Name">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">" select TaskName, BatchRunId from Log_Package_Perf_Status
+where Status= 'Triggered'"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{83863046-F4AB-407C-83AF-5BE7C039B488}"
+              SQLTask:SqlStatementSource=" select TaskName,BatchRunId from Log_Package_Perf_Status&#xA;where Status= 'Triggered'"
+              SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::Triggered_Task_Names" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnTaskFailed]\Loop Through TaskNames and Id"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{751FF5A2-4B9A-4AC6-B9C5-C61FDCB8A92D}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Loop Through TaskNames and Id">
+          <DTS:Variables />
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{8005A0FA-AE52-4808-87BD-D0ED7A2E890E}"
+              DTS:ObjectName="{8005A0FA-AE52-4808-87BD-D0ED7A2E890E}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::Task_Name" />
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{7EC34E42-A4B1-47D5-BF3D-76FE7BEA79D8}"
+              DTS:ObjectName="{7EC34E42-A4B1-47D5-BF3D-76FE7BEA79D8}"
+              DTS:ValueIndex="1"
+              DTS:VariableName="User::Task_ID" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnTaskFailed].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{1554FE22-252B-4FC2-AD11-AC836B5A628F}"
+          DTS:From="Package.EventHandlers[OnTaskFailed]\Get Failed Task Name"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnTaskFailed]\Loop Through TaskNames and Id" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties>
+  </DTS:DesignTimeProperties>
+</DTS:Executable>

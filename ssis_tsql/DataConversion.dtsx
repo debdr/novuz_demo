@@ -1,0 +1,2967 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/1/2016 6:10:44 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DEMO-DTSX1"
+  DTS:CreatorName="DOMAIN_1\dft"
+  DTS:DTSID="{1B5F8858-43A7-4560-86D2-753CC08D7736}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="DataAggregate"
+  DTS:PackageType="5"
+  DTS:VersionBuild="190"
+  DTS:VersionGUID="{C9295353-0F70-44AC-B4EF-0921A08CBF7A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB_BIxPress_2]"
+      DTS:CreationName="OLEDB"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+      DTS:ObjectName="OLEDB_BIxPress_2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=Insight-sql10.pahc.com;Initial Catalog=BIxPress;Provider=SQLOLEDB;Integrated Security=SSPI;Persist Security Info=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\SSIS\OLEDB_BIxPress_2.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{306AD168-F817-47BA-9EAA-8D8EEEB91A2D}"
+      DTS:ObjectName="OLEDB_BIxPress_2" />
+  </DTS:Configurations>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="OLEDB_BIxPress_2"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:DelayValidation="True"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{A7305B60-0199-4435-B473-5526FC089FAB}"
+      DTS:ObjectName="BIxPress Log Provider">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D2C8DD5E-C090-498A-B08A-65B352DF3B0A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RunStatus"
+      DTS:RaiseChangedEvent="True">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{06CDE9F1-1FAF-4D96-BBDD-4151C3403D39}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="(DT_DATE)  &quot;1900-01-01&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/1900</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{418289D3-9B7A-44E9-A3F8-301C8BBDE723}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[System::PackageName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varLoadName">
+      <DTS:VariableValue
+        DTS:DataType="8">DataAggregate</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description="SSISOps : PREFIX. "
+      DTS:DTSID="{3D50FC58-76D1-4A04-9805-B6CF4ACC2585}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description="SSISOps : PREFIX. "
+      DTS:DTSID="{4C105A6A-F965-4411-BC5B-E5C75C183A18}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{DDDC4E18-B61A-4F48-8217-A6FF4DABF48E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_2">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description=""
+      DTS:DTSID="{3CFC888F-6F37-485E-95B9-4F1616C35A7F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_DisableBIxAuditing">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description=""
+      DTS:DTSID="{B67807DC-6B2C-4DD6-984C-1774074C7076}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_DisableConnLogging">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description=""
+      DTS:DTSID="{2304B2FE-6893-4282-B4B8-E885E0B23DD2}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_DisableDataSrcInfoLogging">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description=""
+      DTS:DTSID="{C48758F4-0399-4080-8CB7-DB8E8333DF31}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_DisableDFTRowCountLogging">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{A9C5F91C-A96A-4144-B9AC-23046DA424D9}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_2">
+      <DTS:VariableValue
+        DTS:DataType="20">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4DA5D3DF-7462-4134-96AD-1B28422ED1AE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_InitialParamsVarsToLog">
+      <DTS:VariableValue
+        DTS:DataType="8">User::RunStatus,User::Variable,User::varLoadName</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9ADB4CFF-01B5-41B1-AF13-B70EB8E92F57}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_IsAnyVariableValueChanged">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1733085D-BB72-4D2E-B336-E54266166841}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSSISOps_MaxVarCharsToLog">
+      <DTS:VariableValue
+        DTS:DataType="3">4000</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">7,22,PipelineInitialization,18,OnPipelineRowsSent,24,OnPipelinePrePrimeOutput,25,OnPipelinePostPrimeOutput,24,OnPipelinePreEndOfRowset,25,OnPipelinePostEndOfRowset,7,OnError</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">0</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">0</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePostPrimeOutput"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">0</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPipelinePreEndOfRowset"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">0</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">0</DTS:Property>
+    </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{A7305B60-0199-4435-B473-5526FC089FAB}" />
+    </DTS:SelectedLogProviders>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clean and Transform Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_HistoryAggregate"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_HistoryAggregate\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input].Columns[DEPTID]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="DEPTID"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]"
+                      name="DEPTID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="SSISOps :  PREFIX. "
+              name="DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Src DFTCostHistAgg"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT a.[EMPID],a.[EMPNAME],NULLIF(a.ADDRESS,'Address Unknown') ADDRESS
+        ,a.[DEPTID]
+FROM [dbo].[DFT_EMPLOYEES] a
+        WHERE a.[EMPSTATUS] = 'ACTIVE'</property>  
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Connections[OleDbConnection]"
+                  connectionManagerID="{5C73D759-DEF9-491B-AC6D-C497F63BD5FF}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SQL8_nvz_profiler]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarMonth]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]"
+                      name="CalendarMonth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[BusinessUnit]"
+                      length="30"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]"
+                      name="BusinessUnit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]"
+                      name="CalendarYear"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[DEPTID]"
+                      length="4000"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[DEPTID]"
+                      name="DEPTID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CurrentAmount]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]"
+                      name="CurrentAmount"
+                      precision="38"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[QuantityShipped]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]"
+                      name="QuantityShipped"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarMonth]"
+                      dataType="i4"
+                      name="CalendarMonth" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[BusinessUnit]"
+                      dataType="wstr"
+                      length="30"
+                      name="BusinessUnit" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CalendarYear]"
+                      dataType="i4"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[DEPTID]"
+                      dataType="wstr"
+                      length="4000"
+                      name="DEPTID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[CurrentAmount]"
+                      dataType="numeric"
+                      name="CurrentAmount"
+                      precision="38"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].ExternalColumns[QuantityShipped]"
+                      dataType="i4"
+                      name="QuantityShipped" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarMonth]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarMonth]"
+                      name="CalendarMonth" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[BusinessUnit]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[BusinessUnit]"
+                      name="BusinessUnit" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[QuantityShipped]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[QuantityShipped]"
+                      name="QuantityShipped" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CalendarYear]"
+                      name="CalendarYear" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[DEPTID]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[DEPTID]"
+                      name="DEPTID" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CurrentAmount]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Error Output].Columns[CurrentAmount]"
+                      name="CurrentAmount"
+                      precision="38"
+                      scale="7" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="SSISOps :  PREFIX. "
+              name="SRC Src DFTCostHistAgg">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DFT_EMPLOYEES_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Connections[OleDbConnection]"
+                  connectionManagerID="{83BAB031-5677-4161-AEE9-93254265AB3C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SQL9_nvz_profiler]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CalendarMonth]"
+                      cachedDataType="i4"
+                      cachedName="CalendarMonth"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARMONTH]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarMonth]" />
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
+                      cachedDataType="i4"
+                      cachedName="CalendarYear"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARYEAR]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CalendarYear]" />
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[CurrentAmount]"
+                      cachedDataType="numeric"
+                      cachedName="CurrentAmount"
+                      cachedPrecision="38"
+                      cachedScale="7"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[COMPLETEDAMOUNT]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[CurrentAmount]" />
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[DEPTID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DEPTID"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[DFTITEMNUMBER]"
+                      lineageId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output].Columns[DEPTID]" />
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[BusinessUnit]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="BusinessUnit"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[BusinessUnitCode]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[BusinessUnit]" />
+                    <inputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].Columns[QuantityShipped]"
+                      cachedDataType="i4"
+                      cachedName="QuantityShipped"
+                      externalMetadataColumnId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYSHIPPED]"
+                      lineageId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output].Columns[QuantityShipped]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARMONTH]"
+                      dataType="i4"
+                      name="CALENDARMONTH" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[CALENDARYEAR]"
+                      dataType="i4"
+                      name="CALENDARYEAR" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[DFTITEMNUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="DFTITEMNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYSHIPPED]"
+                      dataType="numeric"
+                      name="QUANTITYSHIPPED"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[COMPLETEDAMOUNT]"
+                      dataType="numeric"
+                      name="COMPLETEDAMOUNT"
+                      precision="38"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input].ExternalColumns[BusinessUnitCode]"
+                      dataType="wstr"
+                      length="50"
+                      name="BusinessUnitCode" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_HistoryAggregate.Paths[Data Conversion Output]"
+              endId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[Row Count Input 1]"
+              name="Data Conversion Output"
+              startId="Package\DFT_HistoryAggregate\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_HistoryAggregate.Paths[OLE DB Source Output]"
+              endId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Inputs[Row Count Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_HistoryAggregate\Src DFTCostHistAgg.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_HistoryAggregate.Paths[Row Count Output 1]"
+              endId="Package\DFT_HistoryAggregate\Data Conversion.Inputs[Data Conversion Input]"
+              name="Row Count Output 1"
+              startId="Package\DFT_HistoryAggregate\SRC Src DFTCostHistAgg.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\DFT_HistoryAggregate.Paths[Row Count Output 2]"
+              endId="Package\DFT_HistoryAggregate\Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 2"
+              startId="Package\DFT_HistoryAggregate\DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create Dim Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Table Create"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{83BAB031-5677-4161-AEE9-93254265AB3C}"
+          SQLTask:SqlStatementSource="USE [nvz_profiler]&#xA;GO&#xA;IF OBJECT_ID('DFT_EMPLOYEES') is not null &#xA;drop table DFT_EMPLOYEES&#xA;CREATE TABLE [dbo].[DFT_EMPLOYEES](&#xA; [EMPID] [int] NOT NULL,&#xA; [EMPNAME] [varchar](25) NULL,&#xA; [ADDRESS] [varchar](50) NULL,&#xA; [EMPSTATUS] [Varchar](10),&#xA; [DEPTID] [decimal](18, 0) NULL&#xA;) &#xA;GO&#xA;Insert into [DFT_EMPLOYEES]&#xA; VALUES(1, 'JOHN SMITH', '1 N MAIN ST', 'ACTIVE', 1), (2, 'KELLY WRIGHT', '506 LAKEVIEW CIR', 'ACTIVE', 1), (3, 'RAY JONES', '512 MAPLE DRIVE', 'ACTIVE', 2), (4, 'CHARLOTTE POWER', '707 S 4TH ST', 'ACTIVE', 2), (5, 'RAJ SINGH', '318 GREEN ST', 'ACTIVE', 2), (6, 'REENA RATHORE', NULL, 'ACTIVE', 3), (7, 'JUSTIN ROBERTS', NULL, 'INACTIVE', 1)&#xA;IF OBJECT_ID('DFT_DEPARTMENTS') is not null &#xA;drop table DFT_DEPARTMENTS&#xA;CREATE TABLE [dbo].[DFT_DEPARTMENTS](&#xA; [DEPTID] [int] NOT NULL,&#xA; [DEPTNAME] [varchar](50) NULL,&#xA; [MANAGERID] [decimal](18, 0) NULL&#xA;) &#xA;GO&#xA;Insert into [DFT_DEPARTMENTS]&#xA; VALUES(1, 'TECHNOLOGY', 1), (2, 'FINANCE', 2), (3, 'HUMAN RESOURCES', 5)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+          DTS:refId="Package\Trigger Summary"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{10547060-417D-4962-801D-2359D64F35B8}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Planning Batch Source Archive"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::RefModel] == 0</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>DataIntegration.dtsx</PackageName>
+              <ParameterAssignment>
+                <ParameterName>RunDate</ParameterName>
+                <BindedVariableOrParameterName>User::Batch_ID</BindedVariableOrParameterName>
+              </ParameterAssignment>
+              <ParameterAssignment>
+                <ParameterName>SFTP_SourceCheck</ParameterName>
+                <BindedVariableOrParameterName>User::SFTP_SourceCheck</BindedVariableOrParameterName>
+              </ParameterAssignment>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0BDFD2D8-E3CC-4728-A98E-38C49935DDD5}"
+      DTS:From="Package\Clean and Transform Data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Trigger Summary" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{AA8D6A70-4488-45BE-B3A2-3FB54A3D8514}"
+      DTS:From="Package\Create Dim Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Clean and Transform Data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{4D7B3602-E222-4590-A7A7-165569697F20}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{F9966285-0D67-491F-9000-2CD04DD46326}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SSISOpsEhObj_Task_OnError"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{9959FE50-8FCA-4120-BA31-05D19A490549}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Task_OnError"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnAlert_67] @Scope='Task',@EventType='E',@ExecutionID=?,@SourceID=?,@SourceName=?,@SourceType='UNKNOWN',@MessageCode=?,@MessageDescription=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnError].PrecedenceConstraints[{1D658DE2-C19D-4826-93F9-86737FD7BDB5\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{1D658DE2-C19D-4826-93F9-86737FD7BDB5}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]!=@[System::PackageID] &amp;&amp; @[System::SourceName]!=@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnError]\SSISOpsEhObj_OnError_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{1D658DE2-C19D-4826-93F9-86737FD7BDB5}"
+          DTS:To="Package.EventHandlers[OnError]\SSISOpsEhObj_Task_OnError"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnError].PrecedenceConstraints[{48EFCB11-58BE-4B16-89C4-89E93F1061CA\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{48EFCB11-58BE-4B16-89C4-89E93F1061CA}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==@[System::PackageID] &amp;&amp; @[System::SourceName]==@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnError]\SSISOpsEhObj_OnError_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{48EFCB11-58BE-4B16-89C4-89E93F1061CA}"
+          DTS:To="Package.EventHandlers[OnError]\SSISOpsEhObj_Package_OnError"
+          DTS:Value="2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnPostExecute]"
+      DTS:CreationName="OnPostExecute"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{040844A1-391A-4625-8BD0-9E6F17472F0E}"
+      DTS:EventID="-2"
+      DTS:EventName="OnPostExecute"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{C1170CEC-B63E-40F3-95AF-DCE2BD969EC1}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{999F7932-4B24-4E1B-9A15-0F038BFF0E7F}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1_DataObjectCatalog">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{31B87EDA-56BC-43BC-9A12-6040CCEC3294}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectCatalog">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{4C97A930-6D6F-4B4E-AAD3-094502F59CAC}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectConnectionName">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{64D8A8D2-2FE7-477E-8799-A6063C1A51A4}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectConnectionString">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{F182E7DD-5716-4628-85C0-88B0396E01FD}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectDataSource">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{D2A31241-A742-404B-BD3F-886156F14EAC}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CCF35AD6EFFA4ABF9E358342D7BC5366_RowCount_1_DataObjectUserName">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{77DCBCBC-7AA4-4573-8D35-90E6D4EB6CD2}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CCF35AD6EFFA4ABF9E358342D7BC5366_RowCount_2_DataObjectCatalog">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{2E415E9D-2EEC-49F4-8190-25A1D0352ACE}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CCF35AD6EFFA4ABF9E358342D7BC5366_RowCount_2_DataObjectConnectionName">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{02C3D17D-36E3-4FBE-9FD6-A592D557A0AB}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CCF35AD6EFFA4ABF9E358342D7BC5366_RowCount_2_DataObjectConnectionString">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{1031136E-8FEA-4BC3-B674-D7079589B578}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CCF35AD6EFFA4ABF9E358342D7BC5366_RowCount_2_DataObjectDataSource">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{FF0D3195-CD5B-4FA8-8B39-2A63C0E79869}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CCF35AD6EFFA4ABF9E358342D7BC5366_RowCount_2_DataObjectUserName">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{179DE30B-E62D-4509-8D31-D82E792CF235}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_ConnectionValues">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{850277BD-EC27-4843-B026-1103DF2AB7B8}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1_DataObjectCatalog">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{678C1EF4-93F2-4A6A-8EC6-6C9DC8ED4308}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1_DataObjectConnectionName">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{22F45F16-5306-4A8D-AAA2-AE3C60DD1B80}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_UserVariablesToBeEvaluatedAsExpressions">
+          <DTS:VariableValue
+            DTS:DataType="8">User::RunStatus,User::Variable,User::varLoadName</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{98CE71A9-E3B1-4662-BE66-6941590F921E}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_VariableValuesChangedQuery">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_1"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DFT_HistoryAggregate=&gt;Src DFTCostHistAgg]"
+          DTS:DTSID="{9BB9DE62-570A-4EE7-A45D-7DB78F52034F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_1"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_16',@ComponentTypeCode='SRC',@ComponentTypeName='OLEDB',@ComponentName='Src DFTCostHistAgg',@DataObjectType='SqlCommand',@DataObjectName='',@DataObjectQuery='SELECT a.[CalendarMonth],convert(nvarchar,a.BusinessUnit) BusinessUnit&#xA;&#x9;,a.[CalendarYear]&#xA;&#x9;,ltrim(rtrim(replace(a.[DEPTID],''&quot;'','''')))   DEPTID&#xA;, 0 QuantityShipped&#xA;--ltrim_blanks_ext( rtrim_blanks_ext( replace_substr(SQL.DEPTID,''&quot;'','''')))&#xA;&#x9;,sum(a.CurrentAmount) CurrentAmount&#xA;FROM (&#xA;&#x9;SELECT DISTINCT *&#xA;&#x9;FROM [nvz_profiler].[dbo].[CostHistorySummary]&#xA;&#x9;WHERE costmethod = 90&#xA;&#x9;&#x9;AND CostType IN (&#xA;&#x9;&#x9;&#x9;''A1''&#xA;&#x9;&#x9;&#x9;,''B1''&#xA;&#x9;&#x9;&#x9;,''B3'',''C2'',''C4''&#xA;&#x9;&#x9;&#x9;)&#xA;&#x9;) a&#xA;GROUP BY a.[CalendarMonth]&#xA;&#x9;,a.[CalendarYear]&#xA;&#x9;,a.[DEPTID],a.BusinessUnit&#xA;--&#x9;,a.QuantityShipped',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_1"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DFT_HistoryAggregate=&gt;Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE]"
+          DTS:DTSID="{72BDA4D2-21CB-433F-96F2-6C8C395A152E}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_2"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_53',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE',@DataObjectType='TableOrView',@DataObjectName='[dbo].[DFT_EMPLOYEES_DIM]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_48AA03814CAA4E8CA215CC9C6D071BF2_RowCount_2"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D3D876A7BEE4409EB9B5ED44A8B4EB94_1"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F76101B=&gt;Src_F76101B]"
+          DTS:DTSID="{D8A52E2A-2E38-4702-848B-241B620D7A5C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_D3D876A7BEE4409EB9B5ED44A8B4EB94_1"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_670',@ComponentTypeCode='SRC',@ComponentTypeName='OLEDB',@ComponentName='Src_F76101B',@DataObjectType='SqlCommand',@DataObjectName='',@DataObjectQuery='SELECT        *&#xA;FROM            dbo.F76101B',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_1"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D3D876A7BEE4409EB9B5ED44A8B4EB94_2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F76101B=&gt;Tgt_F76101B]"
+          DTS:DTSID="{4964A3F6-6263-49FA-A4AF-27DF68002432}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_D3D876A7BEE4409EB9B5ED44A8B4EB94_2"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_865',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='Tgt_F76101B',@DataObjectType='TableOrView',@DataObjectName='[dbo].[PAH_NOTAFISCALHEADER2]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_2_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_2_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_2_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_2_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_D3D876A7BEE4409EB9B5ED44A8B4EB94_RowCount_2"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D681486D8DF64E77BE07F69AB90DC603_1"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DFT_F76B011=&gt;F76B011]"
+          DTS:DTSID="{B0D00A37-5437-47F4-881E-E038DCF23D2C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_D681486D8DF64E77BE07F69AB90DC603_1"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{D681486D-8DF6-4E77-BE07-F69AB90DC603}_181',@ComponentTypeCode='SRC',@ComponentTypeName='OLEDB',@ComponentName='F76B011',@DataObjectType='TableOrView',@DataObjectName='[dbo].[F76B011]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_1_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_1_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_1_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_1_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_1"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D681486D8DF64E77BE07F69AB90DC603_2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DFT_F76B011=&gt;OLE DB Destination]"
+          DTS:DTSID="{169CED51-91F7-4C91-8842-8C7DE71926FD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_D681486D8DF64E77BE07F69AB90DC603_2"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{D681486D-8DF6-4E77-BE07-F69AB90DC603}_292',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='OLE DB Destination',@DataObjectType='TableOrView',@DataObjectName='[dbo].[PAH_NOTAFISCALTAXESDETAIL2]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_2_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_2_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_2_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_2_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_D681486D8DF64E77BE07F69AB90DC603_RowCount_2"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_1"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F5541015=&gt;Src_F5541015]"
+          DTS:DTSID="{4F273422-74C0-4E1B-BF12-B2445D0C9EA6}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_1"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_295',@ComponentTypeCode='SRC',@ComponentTypeName='OLEDB',@ComponentName='Src_F5541015',@DataObjectType='TableOrView',@DataObjectName='[dbo].[F554101S]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_1_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_1_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_1_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_1_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_1"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F5541015=&gt;Star_Species]"
+          DTS:DTSID="{1F750549-1BDF-4DB8-8874-1161223E88EF}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_2"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_346',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='Star_Species',@DataObjectType='TableOrView',@DataObjectName='[dbo].[Star_Species2]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_2_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_2_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_2_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_2_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_2"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_3"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F5541015=&gt;t_speciesSplit]"
+          DTS:DTSID="{6E57B4A9-37D2-46E0-99AF-FB33534AC194}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_3"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_383',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='t_speciesSplit',@DataObjectType='TableOrView',@DataObjectName='[dbo].[T_SPECIES_SPLIT2]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_3_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_3_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_3_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_3_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_3"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_4"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F5541015=&gt;T_STAR_SPECIES]"
+          DTS:DTSID="{E5F951C1-30BA-4A1D-9DDF-8D3BC39B192B}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_4"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_420',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='T_STAR_SPECIES',@DataObjectType='TableOrView',@DataObjectName='[dbo].[T_STAR_SPECIES2]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_4_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_4_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_4_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_4_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_EA799F47E6EA43809D463E5A1E74CBF9_RowCount_4"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_1"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F7611B=&gt;ADO NET Source]"
+          DTS:DTSID="{358B45F4-CE0F-449B-8A71-241D536AD58D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_1"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_2',@ComponentTypeCode='SRC',@ComponentTypeName='ADO NET Source',@ComponentName='ADO NET Source',@DataObjectType='UNKNOWN',@DataObjectName='',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_1_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_1_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_1_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_1_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_1"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_2"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. Row Count Logging For [DF_F7611B=&gt;NF_Reporting]"
+          DTS:DTSID="{A2985095-5F55-4627-BF25-1C0B74398DDD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_2"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="[bix].[usp_SSISOps_Audit_Insert_RowCount_67] @ComponentUniqueID='{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_940',@ComponentTypeCode='DEST',@ComponentTypeName='OLEDB',@ComponentName='NF_Reporting',@DataObjectType='TableOrView',@DataObjectName='[dbo].[PAH_NOTAFISCAL_REPORTING2]',@DataObjectQuery='',@DataObjectConnectionString=?,@DataObjectConnectionName='',@DataObjectDataSource=?,@DataObjectUserName=?,@DataObjectCatalog=?,@ExecutionID=?,@SourceName=?,@SourceID=?,@RecordCount=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_2_DataObjectConnectionString"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_2_DataObjectDataSource"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_2_DataObjectUserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_2_DataObjectCatalog"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_RowCount_2"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="20"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{53D9734C-7DDC-4402-8EDB-AA5213B24880}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::varSSISOps_DisableDataSrcInfoLogging]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_4cb8f337ac79447abf1b3ec572fa805a"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Start"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{D8F8EE85-E355-4D88-A004-E02B5115FC13}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnPostExecute_Start"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::varSSISOps_DisableBIxAuditing]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_9be8726cb99f4f18853e9e82ce8da11b"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Task_BuildVariablesUsingExpressionsQuery"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{4FB06172-7C93-4EB3-83B1-380E414F4A57}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnPostExecute_Task_BuildVariablesUsingExpressionsQuery">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_7bf740fffb5e45f8b67ce5da8df0cd5f"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Task_LogVariablesUsingExpressions"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{03412819-1471-47E5-9200-3DD6BCBE4A06}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnPostExecute_Task_LogVariablesUsingExpressions">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::varSSISOps_VariableValuesChangedQuery" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Package_OnPostExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{09513209-D75C-4549-BC31-13E8CF095C6C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Package_OnPostExecute"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnPostExecute_67] @Scope='Package',@ExecutionID=?,@SourceID=?,@RowCountSupport=1,@LogCustomValues=0,@Connections=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_ConnectionValues"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Package_OnPostExecute_LogConnectionManagers"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{FADF62AC-E252-4A56-AA7E-5F3D4BC56571}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Package_OnPostExecute_LogConnectionManagers"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::varSSISOps_DisableConnLogging]==true</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_a2b4d8cc862e44b08edc3299ccfdcd69"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Task_OnPostExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{D14E8C3A-C894-4DFA-9750-379660D7AF39}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Task_OnPostExecute"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnPostExecute_67] @Scope='Task',@ExecutionID=?,@SourceID=?,@RowCountSupport=1,@LogCustomValues=0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{0243350B-5BE9-4C47-BC12-F7E63845BA3F\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{0243350B-5BE9-4C47-BC12-F7E63845BA3F}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{0243350B-5BE9-4C47-BC12-F7E63845BA3F}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_1"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{0C53B92C-A641-4747-997E-0959DA1B6ECA\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{0C53B92C-A641-4747-997E-0959DA1B6ECA}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{0C53B92C-A641-4747-997E-0959DA1B6ECA}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_1"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{24D1BA91-FB9D-435C-BAD0-655EA10E02D4\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{24D1BA91-FB9D-435C-BAD0-655EA10E02D4}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{24D1BA91-FB9D-435C-BAD0-655EA10E02D4}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_4"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{26A192E9-ADED-4ADB-926B-20F4ECD8E76B\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{26A192E9-ADED-4ADB-926B-20F4ECD8E76B}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{26A192E9-ADED-4ADB-926B-20F4ECD8E76B}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_F32BBCDFF5AB42BD85DFC6B4EBB63EEC_2"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{315B7188-0359-4C14-A7E4-191941953ED0\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{315B7188-0359-4C14-A7E4-191941953ED0}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{315B7188-0359-4C14-A7E4-191941953ED0}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_CCF35AD6EFFA4ABF9E358342D7BC5366_2"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{5856E6C3-C0FE-4F33-9E69-8E6898E95346\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{5856E6C3-C0FE-4F33-9E69-8E6898E95346}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{5856E6C3-C0FE-4F33-9E69-8E6898E95346}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_48AA03814CAA4E8CA215CC9C6D071BF2_2"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{9108B8D6-F9DB-4BF7-ABFF-4461C7ABAB6B\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{9108B8D6-F9DB-4BF7-ABFF-4461C7ABAB6B}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{9108B8D6-F9DB-4BF7-ABFF-4461C7ABAB6B}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_CCF35AD6EFFA4ABF9E358342D7BC5366_1"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{93220548-B049-43A0-9400-E9BF7EDCC569\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{93220548-B049-43A0-9400-E9BF7EDCC569}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]!=@[System::PackageID] &amp;&amp; @[System::SourceName]!=@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{93220548-B049-43A0-9400-E9BF7EDCC569}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Task_OnPostExecute"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{9B3C7F38-0346-432C-969F-85823F74DE42\}]"
+          DTS:CreationName=""
+          DTS:DTSID="{9B3C7F38-0346-432C-969F-85823F74DE42}"
+          DTS:EvalOp="1"
+          DTS:Expression="((@[User::varSSISOps_DisableBIxAuditing]==false) &amp;&amp; (@[User::varSSISOps_DisableVarLogging]==false))"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Task_OnPostExecute"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{9B3C7F38-0346-432C-969F-85823F74DE42}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Task_BuildVariablesUsingExpressionsQuery" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{A9FE7C06-E7AE-46CD-9B45-2B74A3F4E745\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{A9FE7C06-E7AE-46CD-9B45-2B74A3F4E745}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{D681486D-8DF6-4E77-BE07-F69AB90DC603}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{A9FE7C06-E7AE-46CD-9B45-2B74A3F4E745}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D681486D8DF64E77BE07F69AB90DC603_1"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{B0E3B3F4-1D25-4DB8-8F45-DCAE067E7A9C\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{B0E3B3F4-1D25-4DB8-8F45-DCAE067E7A9C}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{D681486D-8DF6-4E77-BE07-F69AB90DC603}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{B0E3B3F4-1D25-4DB8-8F45-DCAE067E7A9C}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D681486D8DF64E77BE07F69AB90DC603_2"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{B2D7623B-8A6E-4F8F-95E8-DB0DB73F1628\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{B2D7623B-8A6E-4F8F-95E8-DB0DB73F1628}"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Package_OnPostExecute_LogConnectionManagers"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{B2D7623B-8A6E-4F8F-95E8-DB0DB73F1628}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Package_OnPostExecute"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{C2F41F67-1921-4E29-8513-5BB2E789186A\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{C2F41F67-1921-4E29-8513-5BB2E789186A}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{C2F41F67-1921-4E29-8513-5BB2E789186A}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_2"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{D13EA637-7EAE-4C65-ACD0-682B224013DC\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{D13EA637-7EAE-4C65-ACD0-682B224013DC}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{D13EA637-7EAE-4C65-ACD0-682B224013DC}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_3"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{D6AE44A1-A6D1-43A9-9E49-D61605E9A04C\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{D6AE44A1-A6D1-43A9-9E49-D61605E9A04C}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{D6AE44A1-A6D1-43A9-9E49-D61605E9A04C}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D3D876A7BEE4409EB9B5ED44A8B4EB94_1"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{E1D14C84-AFC0-46A1-9797-9F65DA9BE3A4\}]"
+          DTS:CreationName=""
+          DTS:DTSID="{E1D14C84-AFC0-46A1-9797-9F65DA9BE3A4}"
+          DTS:EvalOp="1"
+          DTS:Expression="ISNULL(@[User::varSSISOps_VariableValuesChangedQuery]) == false &amp;&amp; LEN(@[User::varSSISOps_VariableValuesChangedQuery]) &gt; 0"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Task_BuildVariablesUsingExpressionsQuery"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{E1D14C84-AFC0-46A1-9797-9F65DA9BE3A4}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Task_LogVariablesUsingExpressions"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{E614186D-2E7C-45A8-9FC1-E7F574B533C2\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{E614186D-2E7C-45A8-9FC1-E7F574B533C2}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==@[System::PackageID] &amp;&amp; @[System::SourceName]==@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{E614186D-2E7C-45A8-9FC1-E7F574B533C2}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Package_OnPostExecute_LogConnectionManagers"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{F62BE6FC-BFE5-4F9E-93C7-1388458533C2\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{F62BE6FC-BFE5-4F9E-93C7-1388458533C2}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{F62BE6FC-BFE5-4F9E-93C7-1388458533C2}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_D3D876A7BEE4409EB9B5ED44A8B4EB94_2"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{FACCF794-F204-44BB-81C3-F60A1E89DB99\}]"
+          DTS:CreationName=""
+          DTS:DTSID="{FACCF794-F204-44BB-81C3-F60A1E89DB99}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}&quot; || @[System::SourceID]==&quot;{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}&quot; || @[System::SourceID]==&quot;{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}&quot; || @[System::SourceID]==&quot;{D681486D-8DF6-4E77-BE07-F69AB90DC603}&quot; || @[System::SourceID]==&quot;{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}&quot; || @[System::SourceID]==&quot;{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false || @[User::varSSISOps_DisableDataSrcInfoLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_Task_OnPostExecute"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{FACCF794-F204-44BB-81C3-F60A1E89DB99}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPostExecute].PrecedenceConstraints[{FE1D2300-CAC3-4AEF-9867-BCD1E3AAF50A\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{FE1D2300-CAC3-4AEF-9867-BCD1E3AAF50A}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==&quot;{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}&quot; &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; (@[User::varSSISOps_DisableDFTRowCountLogging]==false)"
+          DTS:From="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_OnPostExecute_SSISOpsScript"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{FE1D2300-CAC3-4AEF-9867-BCD1E3AAF50A}"
+          DTS:To="Package.EventHandlers[OnPostExecute]\SSISOpsEhObj_EA799F47E6EA43809D463E5A1E74CBF9_1"
+          DTS:Value="2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnPreExecute]"
+      DTS:CreationName="OnPreExecute"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{7209293E-2556-4BE9-BF0B-A1B42407DA3E}"
+      DTS:EventID="-1699671872"
+      DTS:EventName="OnPreExecute"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{91C35BA0-22F4-42ED-BDEE-1504CEE9F6B8}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{E8AAF9C1-75B5-49E7-A974-BE6AA4357FC3}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_ConnectionValues">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{C23688DA-C5AC-4F3B-8CAE-51991B8472C5}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_DfLayout">
+          <DTS:VariableValue
+            DTS:DataType="8">&lt;layout version="3" compressed="true"&gt;&lt;DTS:Executable xmlns:DTS = "www.microsoft.com/SqlServer/Dts" DTS:ExecutableType = "SSIS.Package.2"&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1YXW/aMBT9K1ae0yQOCbSMII2PbpXohxrexjS5iQlWHZvGTgut9t/nhLQzpUEUbdLUwRO+du4599yTq8idMRK3X7mQIMaCJOxIkhQfMZTiwLhC0S1K8CTEd+CCSwROiYgQVSclIlRMBqfjH6etZs+B0Oh2RmjJc3nGprzb+ZKh+WwVAH00RxGRy8CATQMsUspEYEQ0K0GE2sPtcxJlXPCptMI7GuLsHmfWGZM4yZAknBUREmFhDUqKavOcx5haKk4QJY/loU9ICJze0GWwa7aSZMWonQqRULwLsfIxa1XckCWE4e3QazCLwJhJOW/btohmOEXCSl8eiXhqPxA2Xdiu4zTtBUqpzi7dnVwpzy6sup0LdbRqVEgelQDQd0zPNcBZ/C4DTMLrPng2Axjz+QhPZWA0fMs3odOyfAPYb6E1W3uhDVTr73EM+pzmKQM6pNuyHO0HTQ82auFdby/4zUK9Y1WoX4fjwv1EHQzDMbgcDcGgB5T5JWGlhTVcBalX2zJ9WMsCtvYTeysB130ldxNu6TbcTwak9vucKeOKdfSGY7rOSS2ef/wH3KXDQdXlBoQV4DBOngHfCWFdITkT3675gwLJmQSXuZyrNO53DQ1CpzCVX+ipg1n9XL3D3c5qZrXLFQglyqTSiOFI8iwwnhbti5zSnwYYsliLO2bTMVani4VT7hf/fLeE0ZOqCZukmEnxEq4CShiq8qleaONde3qkpmJ1dC19IZpdl+r31mvwtbhabkqhRUboBtOKcdpebagI6CmdY8KSHl+UhZtl8deYKkff4ysuSEEiMD6z5YrnGzm12N/oPtzsPvRODt3/kN2vpmrI8yzClQM2++8dXv6P2f5XXzD1E8Dz/YMF/h8LbBqg4TcOBviYBlj/rq11gOvDgwP+RQfY2kWHWulXIPbzxUr3FzJnsDdjEQAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\DFT_F76B011&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO2WXW/aMBSG/4rl6zSJA+EjI1w0wIZEadVwN6bKDSZYdWwaOyt02n+fCaFz2JiqsU2a1FzZr4/P89onttybYfnwQUgFFkTSlF8ompELjjMSwhucPOCUzGPyCKZCYTCiMsFMRypMmSz1UbuF0OV8MLrbt+5ilcJ+b4K3olBjvhT93vscr1d7AUR4jROqtiHsQLDJGJchTFheAqUeIsEVTXIhxVLZ8SOLSf6Z5PaYK5LmWFHBdwpNiLQHpV09eCUWhNlap5jR5zLoHZaSZPdsG742W+mxchRkUqaMvMZYOc3er23IU8rJr9E1zCaEK6XWgePIZEUyLO3sZUoiMueJ8uXG8Vy35WxwxvSuTvVSq42M6bN2iPy21fQgGC9+v1rz68kQDC5BLIo8IRDMxHpClkon79i+5ds+BM7P0J3G+ej4NgKn8JrsGh+ykNs+acb7A2YGw3gGVKoMDw1twvLc7iluF52PrRN9pIkNhCricJEeiOdA7BusVvLjrXgCkSi4AteFWuuc3icD3W1b3g4PTawdFfrP7ff2ZyIoeyBWOFeR4JwkSuQh/LIJpgVjXyEY8oWhu1bLhfvoXcctx3ct3ysxZlJ9gtOMcCVf5EqIBGM6nz6txu1hzJ7oU1eF1tLvts85ler70DG8puvuj1thKBN8T5g8SLptmHXqkw+hhvbXy4uOyoua3bfy/rflrV2UVYmPCtxsv9X3H9bXMZ42umc+epzDu6r/DVOez+tiCQAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\Seq F7611B\DF_F7611B_Stg&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1YXW/aMBT9K1ae0yQOcSiMIA1Kt0r0Qw1v6zS5wQSrjk1jp4VO++9zArQJJROlL1MLT/he55577zn+kDsjLO++C6nAmEga8yNFE3LEcUIC4wpHdzgmNyG5BxdCYXBKZYSZnqkwZfLm5PTXadOHDuwZ3c4QL0SmzvhEdDvfUjybLg2gj2c4omoRGNA3wDxhXAZGxNICQ2ofaZ/TKBVSTJQV3rOQpA8ktc64InGKFRU8t9CISOukyFA7z8WYMEvbKWb0qZj0BUtJklu2CHaNViS5yqidSBkzsktixWfWsrgBjykn/4auwMwDY6rUrG3bMpqSBEsref4kEon9SPlkbruO49tznLBydsnuyRXt2SWrbudCT10RFdIn3QDo+abnGuBs/Bb+b0axetYCGInZkExUYLiOhZyXHzSbsGUhA9jbgH24D/AJ1u6+4LooqdktgUPPdJ16OHS8F5zW3AMZa0SWJRU0ZCGzAWEt3n59DdNoW181jInqoFqtvZBEqkoQHrKcCnUI1gLCprsX4nUfbK/vuCIbDQ6dZr1umu8nEsAylXCjdA826kvfT0aDcAS2rxlUrb1l+nBd+2Acr9HfhmddYTWVPzbWCrjM1CxTP0vgLU8Ly0W5istwVj/Tu0a3s9wl28UIhAqnSkfjJFIiDYzf8/ZFxtgfAwz4uGR3TN8xlrPzgVP483/ILWDKQfWeHieEK/lsXhk0TUzHy7N+OVBKXw/1PryaWgmft82uC/Xi2gSv2PXwdStKliG+JWyVcdJeOrQF9ETGx5THPTEvCjeL4q8J0+fQA7kSkuZJBMZXvljmuSVmyfZ+/vMlXkN6damj5kEAH1EA1+JRr/+Mr1UA3A0dVPc9H7UOOvgUOoCvDgHoHbj/kNxfDgfgpAdCkaURqbsCeIcD4EOSv3Hr3eEu4CF0kMKnkcKrc6CihQZqHLTwP2rBLj246VH5Kc5ev+91/wLg1S6b6hMAAA==]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\DF_F76101B&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1aXXPiNhT9Kx4/g7FkyR80MLMBdpsO2c3EvHU7jGIU4oltUUveJdnpf69scGIH5JAd0japecK60tHRPfdeCeGTGeG3vzIutAXl4TLpijCm3YTEdKBfkOCWLOnX8cf5R4wRMAHWhydTcscycZZcs+HJp5SsbjYN2oisSBCKu4FuQV1bx1HCB3oQpQUYlzbaPw+DlHF2LQz/z8in6TeaGmeJoMuUiJAleUsYUG6MCyrSeM4WNDJke0ii8L7o9AvhnMZX0d3gULSC5JZRP+Z8GdFDiBXDjM3iJskyTGjz1LVp1gP9RohVv9fjwQ2NCTfihyEBi3vfw+R63YOmaffWJI6q7OLDyRXuOYTV8OSz7LoVyg/vpQMABh0khTpb7BX6q58Gj6prM7aa0msx0CF2DNzBhmzr7UOFViPqeRaJMCBcVCEdICFdCJSgjtNM9XKkqegiJLGB6aixzUbsT1T4JKL8kq5kVAY1aLeDgKUGxo3As7k/+3A59y8mo7OJX8FFnldQhkonQ7PZH+OJP9PU+K7k3PFgA3PveXgx5ysahJT7qyisqYmeg0fN7NXI+FnHPBN9vy3ofEwEnY9YIpODyyox9wVdgeoseRx2MFCHOELN0ShIOvc3S6jhGmblAxsX4jUr4LO05phCUQd4SsreMwEzmpdBPpJjZ2kYV+GtPIcsoMzPn3U73HG7DRoS9YCgV/he+rnieuA0hqfdXBflQoj2uJBafEK5BGiWMkwWyxJaAWZcEHHDf8/l1L5kYpWJPyp4lmV1HDv3ehXLGGWysA9PNhtZv3gq1i0kqYQGgqUD/ce6/zmLor90bZIsKu1mxzb1Te/8wSzs+becul4HldvuMqaJ4A/N24YRiyKJJxdf2fMro6dyq9x2rcHnPumpoB5NTyevtcvHXVdUWqbkikZbxnF/Y5At2inLkkWYLE/Zulh4p1j8JY3kUeEbvWA8zEkM9A/J3YbnHsxK2wvEvWTfZbhkSamwZlU1xq4MRhu3Gr8vjSF4msityO9P5KrGHnqyvR9dcHn68aoflfyo1ulVQ6E+VRsWRVjspD5AXpv6b1rjL9OJNj7VfJalAVWc1JDTivymRX64migTGdUkNpEBcce1rWPK3IXAzGFts7Z7gD3Sl11zhWpdXy8YgG24yHVN27JtEzlu4fCHya7C4JTehzQtR12wMBFg/8DCBnMbNPfaLLlCtMfYUxPsQtPOPdI0qIGmenhJtnR5A+WyB3oRb4WSbd7tnqvy0nrkpGtr67+vcf2QZAPDOXpthRBvSuserbe2Vxb8SRl0frZ+Og3103ksRjvl02ksQ/mN225xO5SkcnTJdOtiNd2yA3oR50fd/p+ZNGXsNltp50QEN6qTKG6vGo4uche5BvCA5doOcJ0irhHCFpDR6NmG5ULHsZAlDQAYtunJb/9MPIxpKmdYyJ+gURYniojAuP1x8rbTfq/MOzcNFm4PSu9Q550DsY3bG6U3rnP9X0RF3Ya4/ffvP6lzr/Lik3yqvhLVK1+oGv4NVio2mFslAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\DF_F5541015&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO2YXW/aMBSG/4qVa5rEIQmUEaQtwNaJ0qrhbp2QG0yw6tg0dlrotP8+J0DntE1VFW1SK7iyjz/eN+cxJx/dCRLX37iQYIYFSdiRJCk+YijFgXGO4muU4MsI34AxlwgMiYgRVTMlIlSU8WHLh/DLZX843bSMXneE1jyXJ2zOe92vGVouNgEQoiWKiVwHBvQNsEopE4ER06xUE2oMd05JnHHB59KMbmiEs1ucmSdM4iRDknBWREiMhdkvvarBUz7D1FRxgii5Lyd9QkLg9Iqug9fuVprcOuqkQiQUv8ZYuczcXNyAJYThl6UrMqvAWEi57FiWiBc4RcJMH5bEPLXuCJuvLMe2fWuFUqrSOlaXus1kRO6VQ+gcN1zHACezt6G6DHm6zCUWBpjw5QjPZWA0W40mhKZnAOs5xaa3n+JEHa6zeR+tdUnXtLUfbHjQqzVw7OxnILoIwef+GRgPJiDieRZjzYmSrTqBdqvWiefu56QfTvtIosl6WQHguKbXcOzjet32nro4m37vDwrxqrBTuXrYcGGz1oTb2s/EeDi9wEueScIS3UP70VFowfpE+P5+HmqPAWwrBPVHsG3vCWAQTUBNAoq/XiUBPtydwMEs2Rl5q7R5juRC/LjgdyDkOZPgLJeqAADnp27BVh4avlckXlc1w1xVsV53Ux87ZQ9EEmUy5IzhWPIsMH6tOuOc0t8GGLCZFrcbvm1sZhcduxwvWp5TyuibqmqepJhJ8RDeBkJOqdpPVW7tVqKtHqkKvJ1a2b7InlW31d+hx+KVuOo+TYUWGaErTMUupNqaWau6eDdVi/1TuvApXege6L5Puqp6k1s8U4RpnrIXEHte64D44yB+hrDreQfCH4fwU8BNr3kA/D4Bqwd7RZeptz5RqNcRdjx4IPwuCVdfHmoBu4eb8P/ka2mfm1RP/xBl7b5z9f4AUzFtl/ISAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\Seq Nota Fiscal details\Seq F7611B\DF_F7611B&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1X3W7aMBh9FSvXaRIHQltGkCBQQKIFkdxs64TcYIJVx2ax00KnvfuchHbuDxtoN1NVrvD57HOOv+NYSStC4nbIhQQLLEjCTiRJ8QlDKfaNKYpvUYKvexfRvHcx72bogdAhEZJn206SZDhBEhvt1hhteS5HbMnbrUGG1qsKAAFao5jIrW/AhgE2KWXCN2KalfRC1XDzksQZF3wprfA7DXF2hzNrxCROMiQJZwVCYiysXmlOFS/5AlNL4QRR8lBO+oSEwOkN3fqHspUmd46aqRAJxYcYK5dZ1eb6LCEM/1n6mczGN1ZSrpu2LeIVTpGw0qclMU/te8KWG9t1nIa9QSnV3aWHmyvbc4irdutKTd0FFZIH1QB4dmrWXQOMFgdGfx1mMahKgTpBRVnVDBDx9RgvpW8oQs/yDGC/oebC2rFqswD8TfG0bkLndJ9mDR67wyiR82lnOO/OOl9G42ASRsNRGE1mnzuDwaw/6ER9Tdx1LUf7QbMOa3uteM6RVnr9MAJH+VG91/3UzBqE+/zABjzWD5IIBJypMyXUw6XpQscxXed8J9VfJI9SB5NbUyRX4utk3Ae9Lgh5nsUYTHK5zuU3XejMsTyzXuSt61hBrk56u1U92c1yBEKJMqnsMhwrKd/4sWle5ZT+NECfLTTcMRuOUc0uBk5ZL/55bimjk6p7KEkxk+IJ3gEBp1TxqbZol6C2eqzujt3UZ/RFv+x9VL9LL8Wf4Wr4uhUaMkY3mO4cp82qoBDQ5TlbEJZ0+abcuFlufoapujvv8JQLUpjwjQ7bVj7f4NSwfwr+xdnaG73rwY/s31n2M36vos9Vd6rUgfs695pX+8j9vecOX+cO6+cfuf+Pudvae78a6V8E9uMXRvsX34TiKWwMAAA=]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "ObjectName"&gt;Package\DFT_HistoryAggregate&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;/DTS:Executable&gt;&lt;/layout&gt;</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. Set this variable to list of variables you want to mask during logging process. You can use comma separated list you can use wildcard &quot; * &quot; for pattern matching names are case insensitive. This option is used to mask variable values during logging process. This option is helpful when you have sensitive data (e.g. varFTP_Password) or variable value is extremly large to display (e.g. varXML_Document). When masking is enabled, &quot;****&quot; is logged in the BIxPress Audit Database rather than actual value of variable. Note: You can configure list of variables you want to mask outside the package by configuring &quot;varSSISOps_FilteredVars&quot;. There are 3 places where you have to set this value (OnPreExecute, OnPostExecute, OnVariableValueChanged)."
+          DTS:DTSID="{8322E1F0-F8C2-4B2C-91D4-65D82E813124}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_FilteredVars">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{65588D3A-24F9-4676-8E5E-F8A8E424A241}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_ParentSourceID">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{2B98D046-38E6-4F0E-A1A0-B5105023261B}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_PkgLayout">
+          <DTS:VariableValue
+            DTS:DataType="8">&lt;layout version="3" compressed="true"&gt;&lt;DTS:Executable xmlns:DTS = "www.microsoft.com/SqlServer/Dts" DTS:ExecutableType = "SSIS.Package.2"&gt;&lt;DTS:PackageVariable&gt;		&lt;DTS:Property DTS:Name = "PackageVariableValue" DTS:DataType = "8"&gt;&lt;![CDATA[H4sIAAAAAAAEAO1deW/bSpL/Klrvv2677yPrBOiD/ZJBXuKNtbPYnbcwGJlxNCNLfhKd4z3Md99qyXZ0kLSkWBnbYYAAFo/q6vpV18Vi8+jt+78XvXLS+WsxnvRHw+d7eu/F0b8hlOW9j53h6KzovC8Go8+dz/3BoNMbDcu8P+xcjkeXxbjsF5NO+TEvO2cjuLTs5B8+AK3O+GpY9i/SjR/zT/3R+AChF0fHee8f+XnROSsm/fMhShegYX5RPN+7PgPDvs6/jq7KV8MPoxdHv4zzy4+zAx2fX+a9fvn1+R6je50vF4Ph5PlebzCeEpjAueLZr/3eeDQZfSgPTn4fnBTjT8X44NWwLM7HeQnTSkf6vWJyEKbDw8lfYWqDAzjezwf9P6YX/Uc+mRQX7wdfn69LbcrkNUfPLiaT80GxDmPT2w5mk8uG5/1h0Tz0wjBfnu99LMvLZ4eHk97H4iKfHFzc3tIbXRx+7g8/fDmkGMvDL/nFYJ67DZjLvpTF8Kw4+06Z5J824/bwclxMClCyRBI04g2gdK0EJ/0/gH9i8D4HJXh1dqs4v/lxkZdF503sdIuLy043fz8oJnud7ujydfGhfL5HMTkQ+5KoA7HXOawiqngd0TqKBigyQmop8lWKIZ5GITjBRMyTohxIccLqSFFqKkh1T4GcG+d/9Acv+5NyNP5qz8/HxTnwPEecaLpPsKyft14h/WZU5rE/6eWD6axPPueXCxMHIe4TwnAtTbbK7knxeyfR7cwIgw0AKzKYTCWiJAjEzQ0hDgSe+ydhArpezGKDwbppNIcJWZiQSBNqGIKxtYdIx9OEiLuZ2sLMSJpLvRKKVZXZZKDTk/J8brCkVeJ6rOzs/GaszagfHI+LXnFWDHuFHw0n5RiMfzn527e//29uRNA1nmY3P96BvwJD8eJoZhufTX91Tsp8XAKNITiL0fj53p9fnr25Ggz+udfJhmdzx/G+xHuzq9MPPD2f/hJ0Osw8UbDk5xdgOCa3h68P+NFgAPTAnMy5kbm7X4P1vb50gXyS22EdqW+nlgdfOA4/V0Uxd+R1Dr51cnMI/p5j9nDx5ptL5469OPIzd1yMr8F9WeRnxfhl0T//mDSAgTJNsi+XeTLkz/e64yuwDcf5sBhca5wU+6D/e525n1xvqoHzOpcMImgdN9/+aTMV5XeyKkC5GNY3rE5/CrIWq7WmhZB9RUztcpQVpuWy6EHMU2kYCd8XRGxiFadkOjM/s+AQ1H4DnVVrNKOzzA/D+1Mv1WAA7lzdHTK/vqmRyVRyfc9rnFSvcbbbNc4eyRrfFjq6Ct19W2dhqpEju0WOPHHk2Cpy7Ho1tI71YUPHV6Gj18uhhe5hQycq7KUQLXSPADq5Cp0QbSbyGKBTFQEmVrjF7hFgp1exk8K00P1A6OxwOJrVSq8B7BZfQFTdj/1J5++j953zopx0rrPWzsnxoA8/IcXuzAqHnW7+JZU1j/Mx8D6H/U2aTVOxFc+yzTMIZLgyPUQN7SHOCoIM7lF09p7q4uyDeK+FntMHxc0+03xvlceDOBpe1/inNelnN787Mb/oDwCcbv8C2H1TfO68G13kw9v6BD+gAAuIKOnGv8eop2l8UpCvqe7+qswH/d5e57+viwpuNDjbWx7kIEkoFL3RrGoNAs0/PVs8toTBXfcvXQAHGma8cg4OzT3pgF/zz0AOr/F4cRTKSfYJQHoJ6A2KccVTlD9jZowlzCLNHUecc4GsFh4JzgMWgjojzT/Xesii22cs2z9juVifual41uGqohD0Jn+zD/9na/PPLGZWyiCQ984hjnmGLAHsKVOOMC1Z8ID9t9V5e3dVjWmRNOXax6gwElIJxCWTSKvAkxmwOkZnHBFbkpYhGOVJQMQCw1wbgzQhFEUfnc1wFNjIOtJLTutPGjEWNhDEqLQIVkBElnmKlJeZxs4EoFhF69581bfjFf4K1zur2W3zzuZePMpUFZ/d+pWOG10Nz/rDczf6MmVof8reu2IAi+1TcTya9Mvp0187/Lq3TdTwp8qUslZkSGUM9IRwjowGMLl0gXicOa1ZC8A9AtDkN5bcxVr+Q7Asw5YFRB3TACANyFkrkfERe8YZtjyu5z8kbx3II3MgQhLJMOMoAvqIK46RtiYil/EYWZSGcbelldeOKmK9QUFFMAeZBCsPNhm8FMMys9brwLckbbFRmgiHiLDg9pSzyLkMjH7SVeU1WH68JWmDraaEQiClOQjEYAGrgRMkPPUMnKwFb7MlaS4pZ8YahIMEgSgvkJEUI8y0EdgqHcO2XHOmBGNUgen1IBBtIRq0ViGhQeyBcMkZ3ZI0zlQQIFRkgD0QiGBIQ2SBCFgNoyjIJQtbkhaOOAx0UCSgHFxwDdGLoojwZHaw53FrGCF4CZgTjIyVCnGqIDASzkOcYVjGfVQGV3qlNUgzEGeQwiIsLcCIA+i10gHxwKWnhFhdHXGso9cZFtRjhkKmk15bEIizERancQ7GFcrVBkZ3xlwmIw48tAwcSHsRkXbGQ7AUNQ8qC9L7LUkTQahzwSOvWIQM0WTIUVBu5yTxwTGu9LaksQ9ZFklEwDREih4iXcMpKJ/0nERHRbTbBqFEg7HjoMjRgBi49xw5UBYUfFDUyRTIbBs6O2alIwTysIyCrC2FxcPAwYqIjVcYQ+S8LWkNyZ7jQoK2MVgyEEkjxxxBngEKJFpu6LYCcS5G4zKJFNAGGJlPRhWUj3gJFlzDOt92NQoasAyZBQ0R4AAUAxuiDKwgpSLRkM8Ttu1qjFhiGblHQUcw2sQoZCOsdiG4B4WPgMTWXiYyaYNmsEZAzBDPAqBCQX4RAyOORolNreVbjpIxi6BQmUEMw/IA4YJliiALTMBicCu89pW4tVHyPaUpxBOTRcGRpuDBAEwNf1nQGMhSiFOcQ6rSArBDAKgQwqfAR6VUnweIg3TA4IAcYQaWcADj2wKwSwAcxdIlqw7ZHuI8SKSNSf6PUIWNZRCTtwDsEABGDVGEOaSoJeADREq0vUZSeJJRDtaoOk5qAbgvADKlpYK4iWgMJghcOHJSWYDCB4odtRD5tADsEABBgsIakgQsGYg9RWxaQlgYooegjVKI9CtDzBaAewJAMkoV9QRhl0Eyj1PFQFoBITk1mYSErSakbQG4LwCMYNhGMEGZg6xTZQSiIJYhZiLFREsjVRsF7fRxBcMiaAX+VwIKXBMHCXTEkPtT4SBVF4BPC8AuAXAuYxrMvwfTj7hJZWHNBNJOBZ5FxylvV8BOAfBKQ8AvkFLgCLizGeRg2KHMYGWJM5kxpAVghwBozA1hGUNBE5IeuDFknKMoSohGseeZ1KoFYJcARJlJSiRS0afnURJ8gPYMiYwSkYGLprJ9ZL1LAKxmgVtDENMpDBUAhSYBQxTkLJcmEhtaH7BLAJxiihHFkaDUpMdjFJnAMCwIbm1qBjDtCtgxACGzmkMe4G1APAaOnA8OMaU4cS69Lt7WgnYJQFAZjd6nxgEFANBIkMsCRcySLFNWSipbAHYJQIaNDFoEBO4XoiALAanWgiHHpZYiBuZZbAHYJQBUEK94QMR4P+vCtCR6BOG/0xHTwGnrhB9y457CjjAvOQCYukUcoOhS0w9RkQoRMsMpbhu/n2bfXrSUCZ4eZwdKEeST4L64sUgQ5yG4NsxSvWXbgxeGCUMySEpxagkUDhnFLKISC8KDJSTbtgNOcCYU8Q5Rk4rOEmJPJySDNCBgMW3qk7WtUysPc0jmIsEaKZx6SiB1gBDWMWTT6yHAp8LV/emt+bqvJM7HAIESQUqkViTjAMyMwU8VvKZcGBXbjoqH7D8cBiPhCWCXcZseAVGIwChDOGjGaRAUs2w9/9H2fT82/8GV9NHgDEUPgTfXOkOOcI+kw1gIHbzKtu40ZcrhYATCND1bV1Iia4hGTnKOuYs6M7Ut5cs2hmtFtYDIlBEPvginx2U6c6lDWAuuo7SuNfIP2cYo7yGjthLFSBUYGtAIYzVOzdKKEyK0s6GNUZ+mjaGQRkriMIpSpr7wYJGOPkPEa1ALGTUzlc851unBpy6LCmyMDsl1CYIRGC6HrGfRBcYdw1ubLy0ocJlBKG2BdPQBqIJXVD7jYCchxPGVdYkq8xWcNMxkEWVCpQcNEFRr5xwS1MSYGWpFW+febY1DRMN9AAiVBRUMkSHIjziKnFnvMfgS1da5/2X+o5tP/vFyNCnr9wZe2Du13Sf4ibgJIkjTJrm/nYx7lTvmpr19GrZIpKtbJM5T/fVqUPZ7+aScJ6nSxpWa1u/nq1Qzq+98p45dzme72tTTXt3SeJ72L0V5kg+KybviErSyt0BaN+0cTNTqFpbzhLunJ1377vTkOPOvspP5fTyNmbJMa4VMcbM8QnbS7dTT18DzvqENnFftebxEvjydzHY2Obkc9BfQ5HeR583c11MWdwrmDu37y1lxGvKyOAXn8Gm25frpSVlcLuxJTKfbqDbsJtq8u/RvycecXm/7skD3YH5nZdo4EdOMwMlovCCYKaJN26maOxTGn94ouYd7u+P+xcJuprx5v+1txU5XxN64TfgaSl8j+6WtZ1WjespmuwgTyTvfJrKgnzRtOXjHvq/zxA6O8/Lj5G8Jzs7bq/LyamFLZ8bYvpLtBoYPMsZaG9x3o8+gLlfDG4QXdxgVGpRRtjsdPjGMKVleyC3ITw/keYwNX3Lv9w44RD9m/l8d/Hzhop2qwuJQrVpM1WJl6RPe7sv4uDF++zrrBNc5GV2Ne0VNpNZ+feORg3xbmrhZyAv7iTOcNsDc1/Je94JHlOBEVuIF71H1UYabSxNCC5fuThmIPNBcayyZlJgrPRX47WDv+z1X/NEvxjd3HY/6w5JU3zg9R9M5iivPMZghrzh5WM8golgmiTTd1MBm/e03zN6IvIHlmyv4RnzXINmuu9W4KpnWe150rW3912O8GCRJcqDu3bZSKmamtQLr63M7BnzJDKpt7adqsJ/qmzFaMZ+q0QylituqcVuXydq7bzi9FnE9uzcX8I14/obbz7mSXo9G/7i67Pyal72PdZFo++WM+wcZcX1ATNrOWRGtpnrNuWAEtNHIA6apUixtALlPyIHEBv76MfoQijGMcJY2Zr+6GNZoRPtBjse+7CthXqk0tF+qepI4rwTE7Zc+Hj3Oi08Ra+x2+/myB4pzU4fVTUPVi6Pj/mUxAHH40cXlaAjz+bUo87OE/Fq9VostOEDu9rvvt39/fXH0Bm5/kdRpVp38a7/4/CocHU4PHx1+u27pjul3SxPHs0/Qd79eFjc3/TUfXBWdEo483/udPpuUYxDd3uyOo8Pp2QXKh/OMHdZO+vvlsdyL0yiSt7C0Po/7ZXGcj/OLycl/vk4X3DHHD/lgUjnHJeL/NSnOpvJIvyppsluaa5BbFwx+SxSvQXUNpfhh0C11I7XKvNzm1EpksXHqCchjrc7a7imIYPZFsJf9Cbjpr/b8fFycp89Sr9NrS2Tba/vwe211Ve9aA/TJ9V9/J86DBqXTcG4uOtQNnymnpKodr3G0WQNt44iKN7XRMrLpDLvn5emxfXnq3tn/ffXavz3pvnx10n377n/sL7+8y36x3ay+eZI0Nd4yUdXR28TKrF92E34WGwoxa+qOrG4obOSntsWQ4Ls/LN9MfM0n2kTjHXyzvE0/dpxm3g383YnnDPo29Xx62Dd3sM1wb0uIPwHuZBX3tkntgeK+y1LTd8ZnTyBHu3+5VcfR3yuq+0w6T4rfO29GMMXYn/TyAVxZ5v3BZJqLKwmpuGszzyeTeXK5knzcjf908d/owlwWhhcb1hpfOavIetYYuCH14XOZT8XbrHqr4RYet82PJppfedtSrtOK/qpcSdMrtRXvAq4z0uIrglwsJdBNLzgqutWIN2/hrsxPL2bLpPF9XLlaSNgYyM78C50A4tq1A6K2U6ObAsLq3JcqBWbuFceaiO7u8dZO5QxvM7mHG9l9L/41r40m0BeXetv98zQVYKM30kjbNfLT6AFZcQJtev9Esb+rkD9Fv63jP03w72z+XYkF2t7wn0kVVvzAgi60pf4Hqgu7K/luWPr5SQu8GxZyHkdtt5v4dZiQtrj7ZIq7FZ0uayjAtFJ3owxzDefijp3yNqrMfRutoTRH1QalObq67do6w69OlOumcisl2wl1WgO8jsZB+cv+cKrC9aVA1VyD3U7YjQysdFE1bbe2Uf1+Tgy1BXyG76+AX6dd88ORhQr+xvHV7RDrNU+Q9BC9rbQ90Ijq/tEnq+i3NZaniv6d3ZKk7ZZ8wvBX5tZVFqCtrvxUKrCqAG1J5ckqwN1906Ttm37AGvCvKKqtZqFtRW2T1PUJSOs7anbpeKoxpgajWeWx7czcVfGusuC0fuNdFVS/JW24Khc2omeqsamQrX4yYqMRu6Bcbz+E/Ov8kMttIE1VJ7N+518lA6myaMPbzpuse50t1de/mtsAxfrVvkpOgk+fHMjTGl/4CgNf2KL/u8pQ1eMW49O/hGz6vYOlzz8sPYltKHVWfCFjIybexNN3xeUIzNNw/hVOqpdUobF/d/0G10oeatWANJZfiV6//FoNQKrD1gggLb2aAuiGAWLV0OsVCvH0OxdtK9ZWUeJtfDjH7A7C/03QJavotoXAx4ruOpWeKcRtpf9JQVyBcFvLe1IIrwLc1uoeLcB31+KmCLe1uMeK8GLyUAtw+8Tth+L740uod2e3T6BEuHOBLaXij6FfsWoepyfl+Vr1z/Yr9fdR/hTfV4RKaP220DixQQ1odQOzjYdOpci64TeqRFZ83HRjZmafzD0vl9stGyqRZv3+u9phF0cU39URVzfIeu8iqjYYe3zBWBO8ZAnetub1mOG98y1C1cbaP2OsXeHEf1j0+EPmljzkE0ghDmdjTV78P19zjUlS3AAA]]&gt;&lt;/DTS:Property&gt;	&lt;DTS:Property DTS:Name = "Namespace"&gt;dts-designer-1.0&lt;/DTS:Property&gt;&lt;/DTS:PackageVariable&gt;&lt;/DTS:Executable&gt;&lt;/layout&gt;</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{F3AC1AE2-6842-419C-A0D8-D903B1E2B67E}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_SourceType">
+          <DTS:VariableValue
+            DTS:DataType="8">unknown</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{7008FDA8-596F-4DD5-9037-AC410CD9B9AE}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_TaskList">
+          <DTS:VariableValue
+            DTS:DataType="8">&lt;xml AuditControlFlowVersion="6" EnableRowCountLogging="True" EnableRowCountLoggingForSource="True" EnableRowCountLoggingForDestination="True" EnableDataFlowMonitoring="True" MaxIterationCount="0" TrackAllVariables="True" TrackOnlyTagVariables="False" EnableVariableChangeTracking="True" EnableVariableChangeTrackingAdvFeatures="True" EnableVariableChangeTrackingAdvFeaturesADORec="False" LogConnectionMgrs="True"&gt;&lt;tsk id="{054E19EB-9873-4226-AC13-753F13E21361}" typ="SQLTask" p="" name="Create NF Temp Tables" on="1" /&gt;&lt;tsk id="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" typ="SQLTask" p="" name="Create Temp Tables" on="1" /&gt;&lt;tsk id="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" typ="PipelineTask" p="" name="DF_F5541015" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_2" /&gt;&lt;com id="44" dir="TRAN" typ="trnderivedcolumn" name="DC_SalesRepCodeTrim" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_44" /&gt;&lt;com id="53" dir="TRAN" typ="trnrowcount" name="DEST Star_Species" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_53" /&gt;&lt;com id="57" dir="TRAN" typ="trnrowcount" name="DEST t_speciesSplit" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_57" /&gt;&lt;com id="61" dir="TRAN" typ="trnrowcount" name="DEST T_STAR_SPECIES" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_61" /&gt;&lt;com id="65" dir="TRAN" typ="trnlookup" name="GetSalesRepDesc" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_65" /&gt;&lt;com id="90" dir="TRAN" typ="trnderivedcolumn" name="Jde_Date_Conversion_Step1" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_90" /&gt;&lt;com id="117" dir="TRAN" typ="trnderivedcolumn" name="Jde_Date_Conversion_Step2" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_117" /&gt;&lt;com id="150" dir="TRAN" typ="trnmulticast" name="Multicast" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_150" /&gt;&lt;com id="156" dir="TRAN" typ="trnsort" name="Sort" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_156" /&gt;&lt;com id="291" dir="TRAN" typ="trnrowcount" name="SRC Src_F5541015" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_291" /&gt;&lt;com id="295" dir="SRC" typ="srcoledb" name="Src_F5541015" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_295" /&gt;&lt;com id="346" dir="DEST" typ="desoledb" name="Star_Species" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_346" /&gt;&lt;com id="383" dir="DEST" typ="desoledb" name="t_speciesSplit" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_383" /&gt;&lt;com id="420" dir="DEST" typ="desoledb" name="T_STAR_SPECIES" pid="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}_420" /&gt;&lt;dp id="457" val="0" ann="" c1="2" c2="44"/&gt;&lt;dp id="458" val="0" ann="" c1="90" c2="117"/&gt;&lt;dp id="459" val="0" ann="" c1="44" c2="65"/&gt;&lt;dp id="460" val="0" ann="" c1="117" c2="156"/&gt;&lt;dp id="461" val="0" ann="" c1="65" c2="90"/&gt;&lt;dp id="462" val="0" ann="" c1="150" c2="61"/&gt;&lt;dp id="463" val="0" ann="" c1="150" c2="57"/&gt;&lt;dp id="464" val="0" ann="" c1="150" c2="53"/&gt;&lt;dp id="465" val="0" ann="" c1="295" c2="291"/&gt;&lt;dp id="466" val="0" ann="" c1="291" c2="2"/&gt;&lt;dp id="467" val="0" ann="" c1="57" c2="383"/&gt;&lt;dp id="468" val="0" ann="" c1="53" c2="346"/&gt;&lt;dp id="469" val="0" ann="" c1="61" c2="420"/&gt;&lt;dp id="470" val="0" ann="" c1="156" c2="150"/&gt;&lt;/tsk&gt;&lt;tsk id="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" typ="PipelineTask" p="" name="DFT_HistoryAggregate" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_2" /&gt;&lt;com id="12" dir="TRAN" typ="trnrowcount" name="DEST Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_12" /&gt;&lt;com id="16" dir="SRC" typ="srcoledb" name="Src DFTCostHistAgg" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_16" /&gt;&lt;com id="49" dir="TRAN" typ="trnrowcount" name="SRC Src DFTCostHistAgg" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_49" /&gt;&lt;com id="53" dir="DEST" typ="desoledb" name="Tgt_PAH_BRAZILCOSTHISTORYAGGREGATE" pid="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}_53" /&gt;&lt;dp id="82" val="0" ann="" c1="2" c2="12"/&gt;&lt;dp id="83" val="0" ann="" c1="16" c2="49"/&gt;&lt;dp id="84" val="0" ann="" c1="49" c2="2"/&gt;&lt;dp id="85" val="0" ann="" c1="12" c2="53"/&gt;&lt;/tsk&gt;&lt;tsk id="{849D94BB-B0AC-4026-8D36-3E49E5FEF3A4}" typ="SQLTask" p="" name="NotaFiscalTableSwap" on="1" /&gt;&lt;tsk id="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" typ="SequenceContainer" p="" name="Seq Nota Fiscal details" on="1" /&gt;&lt;tsk id="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}" typ="PipelineTask" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="DF_F76101B" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_2" /&gt;&lt;com id="248" dir="TRAN" typ="trnderivedcolumn" name="Derived Column" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_248" /&gt;&lt;com id="274" dir="TRAN" typ="trnderivedcolumn" name="Derived Column 1" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_274" /&gt;&lt;com id="357" dir="TRAN" typ="trnrowcount" name="DEST Tgt_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_357" /&gt;&lt;com id="361" dir="TRAN" typ="trnsort" name="Sort" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_361" /&gt;&lt;com id="666" dir="TRAN" typ="trnrowcount" name="SRC Src_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_666" /&gt;&lt;com id="670" dir="SRC" typ="srcoledb" name="Src_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_670" /&gt;&lt;com id="865" dir="DEST" typ="desoledb" name="Tgt_F76101B" pid="{D3D876A7-BEE4-409E-B9B5-ED44A8B4EB94}_865" /&gt;&lt;dp id="1002" val="0" ann="" c1="2" c2="248"/&gt;&lt;dp id="1003" val="0" ann="" c1="274" c2="361"/&gt;&lt;dp id="1004" val="0" ann="" c1="248" c2="274"/&gt;&lt;dp id="1005" val="0" ann="" c1="670" c2="666"/&gt;&lt;dp id="1006" val="0" ann="" c1="666" c2="2"/&gt;&lt;dp id="1007" val="0" ann="" c1="357" c2="865"/&gt;&lt;dp id="1008" val="0" ann="" c1="361" c2="357"/&gt;&lt;/tsk&gt;&lt;tsk id="{D681486D-8DF6-4E77-BE07-F69AB90DC603}" typ="PipelineTask" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="DFT_F76B011" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trndataconversion" name="Data Conversion" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_2" /&gt;&lt;com id="136" dir="TRAN" typ="trnderivedcolumn" name="Derived Column" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_136" /&gt;&lt;com id="167" dir="TRAN" typ="trnderivedcolumn" name="Derived Column 1" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_167" /&gt;&lt;com id="177" dir="TRAN" typ="trnrowcount" name="DEST OLE DB Destination" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_177" /&gt;&lt;com id="181" dir="SRC" typ="srcoledb" name="F76B011" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_181" /&gt;&lt;com id="292" dir="DEST" typ="desoledb" name="OLE DB Destination" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_292" /&gt;&lt;com id="373" dir="TRAN" typ="trnrowcount" name="SRC F76B011" pid="{D681486D-8DF6-4E77-BE07-F69AB90DC603}_373" /&gt;&lt;dp id="377" val="0" ann="" c1="2" c2="136"/&gt;&lt;dp id="378" val="0" ann="" c1="136" c2="167"/&gt;&lt;dp id="379" val="0" ann="" c1="167" c2="177"/&gt;&lt;dp id="380" val="0" ann="" c1="181" c2="373"/&gt;&lt;dp id="381" val="0" ann="" c1="373" c2="2"/&gt;&lt;dp id="382" val="0" ann="" c1="177" c2="292"/&gt;&lt;/tsk&gt;&lt;tsk id="{42B96C54-985C-40D7-99C5-894B758B3491}" typ="SequenceContainer" p="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" name="Seq F7611B" on="1" /&gt;&lt;pc id="{475C9757-79F7-4C66-A9E9-5090BCE62E49}" op="2" and="True" val="0" task1="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}" task2="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}" p="{42B96C54-985C-40D7-99C5-894B758B3491}" refId="Package\Seq Nota Fiscal details\Seq F7611B.PrecedenceConstraints[Constraint]"/&gt;&lt;tsk id="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}" typ="PipelineTask" p="{42B96C54-985C-40D7-99C5-894B758B3491}" name="DF_F7611B" on="1" &gt;&lt;com id="2" dir="SRC" typ="" name="ADO NET Source" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_2" /&gt;&lt;com id="356" dir="TRAN" typ="trnderivedcolumn" name="Computes" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_356" /&gt;&lt;com id="452" dir="TRAN" typ="trndataconversion" name="DC_DataTypes" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_452" /&gt;&lt;com id="910" dir="TRAN" typ="trnderivedcolumn" name="Der_JDE_Dates" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_910" /&gt;&lt;com id="936" dir="TRAN" typ="trnrowcount" name="DEST NF_Reporting" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_936" /&gt;&lt;com id="940" dir="DEST" typ="desoledb" name="NF_Reporting" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_940" /&gt;&lt;com id="1185" dir="TRAN" typ="trnrowcount" name="SRC ADO NET Source" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_1185" /&gt;&lt;com id="1189" dir="TRAN" typ="trnderivedcolumn" name="TimeOfDay" pid="{F32BBCDF-F5AB-42BD-85DF-C6B4EBB63EEC}_1189" /&gt;&lt;dp id="1199" val="0" ann="" c1="2" c2="1185"/&gt;&lt;dp id="1200" val="0" ann="" c1="452" c2="356"/&gt;&lt;dp id="1201" val="0" ann="" c1="356" c2="910"/&gt;&lt;dp id="1202" val="0" ann="" c1="910" c2="1189"/&gt;&lt;dp id="1203" val="0" ann="" c1="1189" c2="936"/&gt;&lt;dp id="1204" val="0" ann="" c1="1185" c2="452"/&gt;&lt;dp id="1205" val="0" ann="" c1="936" c2="940"/&gt;&lt;/tsk&gt;&lt;tsk id="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}" typ="PipelineTask" p="{42B96C54-985C-40D7-99C5-894B758B3491}" name="DF_F7611B_Stg" on="1" &gt;&lt;com id="2" dir="TRAN" typ="trnrowcount" name="DEST tgt" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_2" /&gt;&lt;com id="6" dir="SRC" typ="srcoledb" name="OLE DB Source" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_6" /&gt;&lt;com id="363" dir="TRAN" typ="trnrowcount" name="SRC OLE DB Source" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_363" /&gt;&lt;com id="367" dir="DEST" typ="desoledb" name="tgt" pid="{CCF35AD6-EFFA-4ABF-9E35-8342D7BC5366}_367" /&gt;&lt;dp id="612" val="0" ann="" c1="6" c2="363"/&gt;&lt;dp id="613" val="0" ann="" c1="363" c2="2"/&gt;&lt;dp id="614" val="0" ann="" c1="2" c2="367"/&gt;&lt;/tsk&gt;&lt;tsk id="{01A9935F-F76A-4505-9190-68F81CB871A0}" typ="SQLTask" p="" name="SpeciesTableSwap" on="1" /&gt;&lt;tsk id="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}" typ="SQLTask" p="" name="Table Create" on="1" /&gt;&lt;tsk id="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" typ="SQLTask" p="" name="Table Swap" on="1" /&gt;&lt;pc id="{0BDFD2D8-E3CC-4728-A98E-38C49935DDD5}" op="2" and="True" val="0" task1="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" task2="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" p="" refId="Package.PrecedenceConstraints[Constraint 1]"/&gt;&lt;pc id="{AA8D6A70-4488-45BE-B3A2-3FB54A3D8514}" op="2" and="True" val="0" task1="{982E3E22-35B3-4BCF-A86F-2C56B6690EAE}" task2="{48AA0381-4CAA-4E8C-A215-CC9C6D071BF2}" p="" refId="Package.PrecedenceConstraints[Constraint 2]"/&gt;&lt;pc id="{675D91F2-5106-49D1-AD7C-7380ABC98AF1}" op="2" and="True" val="0" task1="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" task2="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" p="" refId="Package.PrecedenceConstraints[Constraint 3]"/&gt;&lt;pc id="{5C8C2BA9-F8BB-48E1-A709-14B8F6F21C6D}" op="2" and="True" val="0" task1="{55D0BD03-EA81-4FE9-B13B-5B16803BC6C3}" task2="{6F647F50-AF2F-4348-AA99-D101EAE3F244}" p="" refId="Package.PrecedenceConstraints[Constraint 4]"/&gt;&lt;pc id="{CD03C9AD-4D54-43BE-85BA-87EEF780090E}" op="2" and="True" val="0" task1="{EA799F47-E6EA-4380-9D46-3E5A1E74CBF9}" task2="{01A9935F-F76A-4505-9190-68F81CB871A0}" p="" refId="Package.PrecedenceConstraints[Constraint 5]"/&gt;&lt;pc id="{60F9E2B3-A2E1-4120-8546-1FE32AFD184F}" op="2" and="True" val="0" task1="{01A9935F-F76A-4505-9190-68F81CB871A0}" task2="{054E19EB-9873-4226-AC13-753F13E21361}" p="" refId="Package.PrecedenceConstraints[Constraint 6]"/&gt;&lt;pc id="{3431E6ED-B47C-47EC-8B87-B06708B3AC82}" op="2" and="True" val="0" task1="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" task2="{849D94BB-B0AC-4026-8D36-3E49E5FEF3A4}" p="" refId="Package.PrecedenceConstraints[Constraint 7]"/&gt;&lt;pc id="{4F5870A7-3FEA-48F0-A442-AADF1443F40F}" op="2" and="True" val="0" task1="{054E19EB-9873-4226-AC13-753F13E21361}" task2="{2B256F8C-06E8-4D77-8E61-582C8377E23A}" p="" refId="Package.PrecedenceConstraints[Constraint 8]"/&gt;&lt;/xml&gt;</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{5E4B8E2B-6902-4001-ACF1-CB0907442E91}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_VariableValues">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_OnPreExecute_Start"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{647A999E-2894-404C-B5A8-CA0FCC20B1CF}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnPreExecute_Start">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::varSSISOps_DisableBIxAuditing]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_8fc56ac111b94af0ad1c0af023891866"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_Package_OnPreExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{F53AB511-2E13-4076-812E-716CD565F337}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Package_OnPreExecute"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnPreExecute_67] @Scope='Package',@ExecutionID=?,@SourceID=?,@SourceName=?,@InteractiveMode=?,@UserName=?,@MachineName=?,@LogCustomValues=0,@LayoutXML=?,@TaskListXML=?,@DFLayoutXML=?,@Variables=?,@Connections=?,@GroupNames=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::InteractiveMode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::UserName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::MachineName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="User::varSSISOps_PkgLayout"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="7"
+                SQLTask:DtsVariableName="User::varSSISOps_TaskList"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="8"
+                SQLTask:DtsVariableName="User::varSSISOps_DfLayout"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="9"
+                SQLTask:DtsVariableName="User::varSSISOps_VariableValues"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="10"
+                SQLTask:DtsVariableName="User::varSSISOps_ConnectionValues"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="11"
+                SQLTask:DtsVariableName="User::varSSISOps_GroupNames"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_Task_OnPreExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{A1723A25-9ABA-4574-95B8-EFA17E9F047F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Task_OnPreExecute"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnPreExecute_67] @Scope='Task',@ExecutionID=?,@SourceID=?,@ParentSourceID=?,@SourceName=?,@SourceType=?,@LogCustomValues=0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::varSSISOps_ParentSourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="User::varSSISOps_SourceType"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPreExecute].PrecedenceConstraints[{1C74B278-5A5A-40B7-ADF0-21E0099A014C\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{1C74B278-5A5A-40B7-ADF0-21E0099A014C}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]!=@[System::PackageID] &amp;&amp; @[System::SourceName]!=@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_OnPreExecute_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{1C74B278-5A5A-40B7-ADF0-21E0099A014C}"
+          DTS:To="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_Task_OnPreExecute"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnPreExecute].PrecedenceConstraints[{999B8880-C24B-4B42-B495-B54D72B40C7F\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{999B8880-C24B-4B42-B495-B54D72B40C7F}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==@[System::PackageID] &amp;&amp; @[System::SourceName]==@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_OnPreExecute_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{999B8880-C24B-4B42-B495-B54D72B40C7F}"
+          DTS:To="Package.EventHandlers[OnPreExecute]\SSISOpsEhObj_Package_OnPreExecute"
+          DTS:Value="2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnVariableValueChanged]"
+      DTS:CreationName="OnVariableValueChanged"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{43314A19-4023-4B36-8610-9BCB1036EA35}"
+      DTS:EventID="0"
+      DTS:EventName="OnVariableValueChanged"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{C076280A-ECE1-4BDD-A113-3C56EB2EA5B6}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{95CE9ACD-EEBC-4AE7-BDA9-13A90AF530F2}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_CurValue">
+          <DTS:VariableValue
+            DTS:DataSubType="ManagedSerializable"
+            DTS:DataType="13">
+            <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+              <SOAP-ENV:Body>
+                <xsd:anyType
+                  id="ref-1"></xsd:anyType>
+              </SOAP-ENV:Body>
+            </SOAP-ENV:Envelope>
+          </DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. Set this variable to list of variables you want to mask during logging process. You can use comma separated list you can use wildcard &quot; * &quot; for pattern matching names are case insensitive. This option is used to mask variable values during logging process. This option is helpful when you have sensitive data (e.g. varFTP_Password) or variable value is extremly large to display (e.g. varXML_Document). When masking is enabled, &quot;****&quot; is logged in the BIxPress Audit Database rather than actual value of variable. Note: You can configure list of variables you want to mask outside the package by configuring &quot;varSSISOps_FilteredVars&quot;. There are 3 places where you have to set this value (OnPreExecute, OnPostExecute, OnVariableValueChanged)."
+          DTS:DTSID="{60508673-309E-4613-8868-C02F2AAB3BA1}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="varSSISOps_FilteredVars">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged]\SSISOpsEhObj_OnVariableValueChanged_Start"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{5D081A12-7640-430D-817D-B1D55F30F3FF}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnVariableValueChanged_Start"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::varSSISOps_DisableBIxAuditing]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_8adabea61af44dd7826784d2bc058acb"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged]\SSISOpsEhObj_Task_OnVariableValueChanged"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{3A692105-F603-4FD3-83CC-20308DAE2A83}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Task_OnVariableValueChanged"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnVariableValueChanged_67] @ExecutionID=?,@SourceID=?,@VariableName=?,@VariableValue=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::VariableName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::varSSISOps_CurValue"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged].PrecedenceConstraints[{9B6474B9-05EB-44CA-9F3B-2FDD54B24F9D\}]"
+          DTS:CreationName=""
+          DTS:DTSID="{9B6474B9-05EB-44CA-9F3B-2FDD54B24F9D}"
+          DTS:From="Package.EventHandlers[OnVariableValueChanged]\SSISOpsEhObj_OnVariableValueChanged_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{9B6474B9-05EB-44CA-9F3B-2FDD54B24F9D}"
+          DTS:To="Package.EventHandlers[OnVariableValueChanged]\SSISOpsEhObj_Task_OnVariableValueChanged"
+          DTS:Value="2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnWarning]"
+      DTS:CreationName="OnWarning"
+      DTS:Description="SSISOps :  PREFIX. "
+      DTS:DTSID="{AC06623B-3350-466D-BF3F-CF93CDA12439}"
+      DTS:EventID="14"
+      DTS:EventName="OnWarning"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{D6EF7A19-F1C1-46C7-B742-3E9DD109DC18}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnWarning]\SSISOpsEhObj_OnWarning_Start"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{A5004D62-4361-419D-89A7-401867A145A5}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_OnWarning_Start"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Disable">@[User::varSSISOps_DisableBIxAuditing]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_b388fd34940a494a805b012b03c4db2c"
+              VSTAMajorVersion="16"
+              VSTAMinorVersion="0"
+              Language="VisualBasic" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnWarning]\SSISOpsEhObj_Package_OnWarning"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{29541DEC-E6FE-4058-9B66-9FD846328EB9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Package_OnWarning"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnAlert_67] @Scope='Package',@EventType='W',@ExecutionID=?,@SourceID=?,@SourceName=?,@SourceType='UNKNOWN',@MessageCode=?,@MessageDescription=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnWarning]\SSISOpsEhObj_Task_OnWarning"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DisableEventHandlers="True"
+          DTS:DTSID="{B4B539BF-2924-41D1-BCDF-91984710A62D}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSISOpsEhObj_Task_OnWarning"
+          DTS:TransactionOption="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C5A44FD0-E91A-428B-BC96-9986A1145BC8}"
+              SQLTask:SqlStatementSource="EXEC [bix].[usp_SSISOps_Audit_OnAlert_67] @Scope='Task',@EventType='W',@ExecutionID=?,@SourceID=?,@SourceName=?,@SourceType='UNKNOWN',@MessageCode=?,@MessageDescription=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnWarning].PrecedenceConstraints[{1F11E6D2-2EFB-4873-A5EC-3F2673FDF6B7\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{1F11E6D2-2EFB-4873-A5EC-3F2673FDF6B7}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]==@[System::PackageID] &amp;&amp; @[System::SourceName]==@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnWarning]\SSISOpsEhObj_OnWarning_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{1F11E6D2-2EFB-4873-A5EC-3F2673FDF6B7}"
+          DTS:To="Package.EventHandlers[OnWarning]\SSISOpsEhObj_Package_OnWarning"
+          DTS:Value="2" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnWarning].PrecedenceConstraints[{9A12A668-B277-44F2-A478-9C02F1F69081\}]"
+          DTS:CreationName=""
+          DTS:Description="SSISOps :  PREFIX. "
+          DTS:DTSID="{9A12A668-B277-44F2-A478-9C02F1F69081}"
+          DTS:EvalOp="1"
+          DTS:Expression="@[System::SourceID]!=@[System::PackageID] &amp;&amp; @[System::SourceName]!=@[System::PackageName] &amp;&amp; SUBSTRING(@[System::SourceName], 1, 12)!=&quot;SSISOpsEhObj&quot; &amp;&amp; @[User::varSSISOps_DisableBIxAuditing]==false"
+          DTS:From="Package.EventHandlers[OnWarning]\SSISOpsEhObj_OnWarning_Start"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="{9A12A668-B277-44F2-A478-9C02F1F69081}"
+          DTS:To="Package.EventHandlers[OnWarning]\SSISOpsEhObj_Task_OnWarning"
+          DTS:Value="2" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties>
+  </DTS:DesignTimeProperties>
+</DTS:Executable>
