@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <SSIS:Parameters xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
   <SSIS:Parameter
-    SSIS:Name="InsightSQL8nvz_profiler_412_ConnectionString">
+    SSIS:Name="InsightSQL8nvz_profiler_ConnectionString">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{52d6fe68-9631-4d67-a633-6904f2e13af2}</SSIS:Property>
@@ -16,7 +16,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=INSIGHT-SQL8\INSIGHTSQL8PROD;Initial Catalog=nvz_profiler_412;Integrated Security=True;Application Name=SSIS-SpeciesSplitLoad-{318AE149-0C5C-49B5-B508-2A07D5E12FDB}</SSIS:Property>
+        SSIS:Name="Value">Data Source=INSIGHT-SQL8\INSIGHTSQL8PROD;Initial Catalog=nvz_profiler;Integrated Security=True;Application Name=SSIS-SpeciesSplitLoad-{318AE149-0C5C-49B5-B508-2A07D5E12FDB}</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -85,7 +85,7 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="InsightSql8_nvz_profiler_412_ConnectionString">
+    SSIS:Name="InsightSql8_nvz_profiler_ConnectionString">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{22ca5bbd-b817-4206-9f86-28aa573d1f53}</SSIS:Property>
@@ -100,7 +100,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=INSIGHT-SQL8\INSIGHTSQL8PROD;Initial Catalog=nvz_profiler_412;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=INSIGHT-SQL8\INSIGHTSQL8PROD;Initial Catalog=nvz_profiler;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -421,7 +421,7 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="SQL8_nvz_profiler_412_ConnectionString">
+    SSIS:Name="SQL8_nvz_profiler_ConnectionString">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{05d54fc1-3cda-4484-ac5c-1e8bd330bfab}</SSIS:Property>
@@ -436,7 +436,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=INSIGHT-SQL8\INSIGHTSQL8PROD;Initial Catalog=nvz_profiler_412;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=INSIGHT-SQL8\INSIGHTSQL8PROD;Initial Catalog=nvz_profiler;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -463,7 +463,7 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="ADO_nvz_profiler_412_ConnectionString">
+    SSIS:Name="ADO_nvz_profiler_ConnectionString">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{51f713a1-7629-4245-a7c5-bf310d1b8d0a}</SSIS:Property>
@@ -478,7 +478,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=Insight-SQL8;Initial Catalog=nvz_profiler_412;Integrated Security=True;Application Name=SSIS-{318AE149-0C5C-49B5-B508-2A07D5E12FDB}ADO_nvz_profiler_412;</SSIS:Property>
+        SSIS:Name="Value">Data Source=Insight-SQL8;Initial Catalog=nvz_profiler;Integrated Security=True;Application Name=SSIS-{318AE149-0C5C-49B5-B508-2A07D5E12FDB}ADO_nvz_profiler;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
